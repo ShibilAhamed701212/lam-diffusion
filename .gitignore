@@ -36,3 +36,6 @@ next-env.d.ts
 .claude/
 .vscode/
 .idea/
+
+# Local copy of the Google Drive training folder (weights, data.tar)
+drive_backup/

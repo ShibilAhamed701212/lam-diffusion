@@ -24,8 +24,8 @@ from lam.spec_bridge import spec_to_descriptor  # noqa: E402
 WEIGHTS = os.environ.get("LAM_WEIGHTS", "/content/ckpt/weights.pt")
 PLANNER = os.environ.get("LAM_PLANNER_LORA", "/content/ckpt/planner_lora")
 POSES = os.environ.get("LAM_POSE_LIBRARY", "/content/data/pose_library.json")
-QUALITY = "masterpiece, high score, great score, absurdres"
-NEGATIVE = ("lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer digits, cropped, "
+QUALITY = "safe, masterpiece, high score, great score, absurdres"  # "safe": Animagine rating tag
+NEGATIVE = ("nsfw, lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer digits, cropped, "
             "worst quality, low quality, low score, bad score, average score, signature, watermark, username, blurry")
 
 

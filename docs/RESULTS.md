@@ -97,6 +97,29 @@ do mean the model doesn't yet beat its base on absolute colour accuracy. Likely 
 
 These have not been separated yet.
 
+## Kaggle inference run: trained model vs stock Animagine
+
+The public notebook [`lam-diffusion-inference`](https://www.kaggle.com/code/shibilahamed0095/lam-diffusion-inference)
+(free 2× T4, fp16) clones this repo and renders six hand-written specs with the trained model (left, from the
+descriptor) and stock Animagine XL (right, prompt only, same seed). The model loads in about 100 s; each pair takes
+about 45 s.
+
+![Trained model vs stock Animagine on Kaggle](../report/figs/kaggle_lam_vs_stock.png)
+
+| Scene | Trained model | Stock Animagine |
+|---|---|---|
+| Classroom boy + girl, sitting | ✅ both characters, right hair, seated at desks | ❌ three people, wrong pose |
+| Elderly man on a bench | ✅ | ✅ |
+| Silver-haired girl waving | ❌ two girls, blue and dark hair | ✅ |
+| Two girls jumping on a beach | ❌ one girl lying down | ✅ close |
+| Red hair, blue eyes | ❌ black hair, face cropped | ✅ |
+| Blue hair, red eyes | 🟡 eyes right, hair white | ✅ |
+
+This matches the colour factorial. The descriptor helps with **multi-character layout and binding** (the
+classroom pair), but hair colour and character count are less reliable than the base model. (This run predates
+adding Animagine's `safe` rating tag and the `nsfw` negative to the engine, which is why the beach image is
+suggestive.)
+
 ## Paper metrics (§V-C)
 
 `lam/eval/generate.py` + `lam/eval/metrics.py` compute CLIP Score, FID / KID, LPIPS, SSIM, attribute-binding
