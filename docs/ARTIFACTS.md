@@ -9,8 +9,8 @@ Kaggle for weights and data. Nothing is duplicated across them.
 |---|---|
 | `lam/`, `server/`, `web/`, `scripts/` | All code: model, training stages, dataset build, evaluation, app, cloud-GPU helpers |
 | `docs/` | Architecture, implementation, dataset, training, inference, results, this file |
-| `report/figs/`, `report/data/` | Report figures and the raw logged numbers behind them (stage results, leakage runs, colour factorial, dataset stats) |
-| `reports/` | Diagnosis sheets and sample grids from every milestone (overfit failure, v3 fix, pilots, full-U-Net gate, final model, Kaggle precision checks) |
+| `reports/figures/`, `reports/data/`, `reports/scripts/` | Report figures, the raw logged numbers behind them, and the scripts that regenerate them (stage results, leakage runs, colour factorial, dataset stats) |
+| `reports/milestones/` | Diagnosis sheets and sample grids from every milestone (overfit failure, v3 fix, pilots, full-U-Net gate, final model, Kaggle precision checks) |
 | `output/` | App demo video and sample generations |
 
 ## Kaggle (all public)
@@ -27,6 +27,6 @@ Kaggle for weights and data. Nothing is duplicated across them.
 
 | Item | Why |
 |---|---|
-| Pilot checkpoints from the swirl-fix and swap-loss experiments | Obsolete side experiments. Their results are in `reports/fix*` and `report/data/leakage_runs.json`. |
+| Pilot checkpoints from the swirl-fix and swap-loss experiments | Obsolete side experiments. Their results are in `reports/milestones/fix*` and `reports/data/leakage_runs.json`. |
 | Kaggle `lam-server` notebook | Contains a server token |
 | The research paper PDF | Not ours to redistribute |

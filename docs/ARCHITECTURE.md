@@ -11,7 +11,7 @@ A = F_LAM(N)        Eq. 1   prompt N  ->  action descriptors A = {a_1 ... a_n}
 I = G_diff(A)       Eq. 2   the image is generated from A, not from the raw prompt
 ```
 
-![Inference pipeline](../report/figs/d1_inference.png)
+![Inference pipeline](../reports/figures/d1_inference.png)
 
 The model has the four blocks of the paper's Fig. 1. Section numbers (§) refer to the paper.
 
@@ -80,7 +80,7 @@ from step 0. See [IMPLEMENTATION.md § design history](IMPLEMENTATION.md#design-
 
 ## Block 2: Dual-Stream Conditioning Pathway (§IV-C), `lam/conditioning.py`
 
-![Dual-stream conditioning](../report/figs/d3_dualstream.png)
+![Dual-stream conditioning](../reports/figures/d3_dualstream.png)
 
 **Stream 1, cross-attention conditioning.** In **every** cross-attention layer of the U-Net (down, mid and up,
 at all resolutions: the paper's "multi-resolution cross-attention with action embeddings"), the character tokens
@@ -140,7 +140,7 @@ by **TAESDXL** (a tiny differentiable decoder), and are applied only at low nois
 
 ## Training stages (§IV-F)
 
-![Training stages](../report/figs/d2_training.png)
+![Training stages](../reports/figures/d2_training.png)
 
 | # | Paper stage | Script |
 |---|---|---|

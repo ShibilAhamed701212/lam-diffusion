@@ -12,7 +12,7 @@ descriptor**: each character's gender, age, pose, ordered actions, hair, eyes, o
 The descriptor drives a diffusion U-Net through a **dual-stream conditioning pathway**, so attributes stay
 attached to the right character.
 
-![Attribute control on held-out specs](reports/final/final_diag.jpg)
+![Attribute control on held-out specs](reports/milestones/final/final_diag.jpg)
 <sub>Trained model on held-out test specs. Rows: ground truth · as specified · only eye colour → red · only hair colour → blonde · action stream off.</sub>
 
 ---
@@ -33,7 +33,7 @@ attached to the right character.
 
 ## How it works
 
-![Inference pipeline](report/figs/d1_inference.png)
+![Inference pipeline](reports/figures/d1_inference.png)
 
 ```
 prompt ──► Planner F_LAM ──► action descriptor A ──► LAM Encoder ──► dual-stream conditioning
@@ -45,7 +45,7 @@ prompt ──► Planner F_LAM ──► action descriptor A ──► LAM Encod
 Each character's attribute tokens join the U-Net's text tokens in **one shared attention**, masked to that
 character's bounding box. Outside every box, the U-Net behaves exactly like the pre-trained model.
 
-![Dual-stream conditioning](report/figs/d3_dualstream.png)
+![Dual-stream conditioning](reports/figures/d3_dualstream.png)
 
 More: [Architecture](docs/ARCHITECTURE.md) · [Paper → code](docs/IMPLEMENTATION.md).
 
@@ -60,7 +60,7 @@ More: [Architecture](docs/ARCHITECTURE.md) · [Paper → code](docs/IMPLEMENTATI
 | 3–5 · full U-Net, 11k steps | hair / eye colour leakage (lower is better) | 0.125 / 0.375 | **0.05 / 0.10** |
 | 3–5 · full U-Net, 11k steps | hair / eye colour correct, 8×8 factorial (stock Animagine → ours) | 100% / 48.4% | 64.8% / 56.2% |
 
-![Leakage across training](report/figs/f7_leakage_progress.png)
+![Leakage across training](reports/figures/f7_leakage_progress.png)
 
 Full results, the diagnosis history (including what failed) and known limitations are in [docs/RESULTS.md](docs/RESULTS.md).
 The paper's §V-C metric suite (CLIP Score, FID, LPIPS, SSIM, binding precision) is implemented in `lam/eval/`.
@@ -120,8 +120,8 @@ lam/          model (§IV): descriptor, encoder, conditioning, model, pipeline, 
 server/       FastAPI inference API: planner, spec, poses, engines (trained LAM / ControlNet prototype)
 web/          Next.js app (LAM Studio)
 scripts/      Colab helpers: VM setup, background jobs, keep-alive, big uploads, Drive mount, sample batch
-report/       figure scripts, figures and logged stage results
-reports/      diagnosis sheets and sample grids from every milestone
+reports/      figures/ (charts, diagrams) · data/ (raw results) · scripts/ (regenerate figures)
+              · milestones/ (diagnosis sheets and sample grids from every training step)
 output/       app demo video and sample generations
 docs/         architecture · implementation · dataset · training · inference · results
 ```
@@ -143,4 +143,4 @@ docs/         architecture · implementation · dataset · training · inference
 - The method is from the LAM-Diffusion paper by R. S. Yadunand Raj and Divya Udayan J (Amrita Vishwa Vidyapeetham). The paper itself is not included in this repo.
 - Base models: [Animagine XL 4.0](https://huggingface.co/cagliostrolab/animagine-xl-4.0), [SDXL VAE fp16-fix](https://huggingface.co/madebyollin/sdxl-vae-fp16-fix), [TAESDXL](https://huggingface.co/madebyollin/taesdxl), [CLIP ViT-L/14](https://huggingface.co/openai/clip-vit-large-patch14), [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct). Each is used under its own license.
 - Data: [danbooru2024-sfw](https://huggingface.co/datasets/deepghs/danbooru2024-sfw) (artworks belong to their artists; images are not redistributed), [HumanML3D](https://github.com/EricGuo5513/HumanML3D) captions, the WD EVA02 tagger and RTMPose / HumanArt for annotation.
-- Sample sheets under `reports/` include small ground-truth thumbnails from the dataset for comparison; those artworks belong to their artists.
+- Sample sheets under `reports/milestones/` include small ground-truth thumbnails from the dataset for comparison; those artworks belong to their artists.

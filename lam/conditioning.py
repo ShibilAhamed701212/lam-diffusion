@@ -14,7 +14,7 @@ logit bias on the action tokens (starts at 0; our addition, logged as the "gate"
 
 A first version ADDED a separate action attention on top of the text attention (gate 1). That
 doubled the signal inside boxes and turned images muddy as the tokens grew during training
-(reports/m3_diag); sharing one softmax keeps activations in the pre-trained range.
+(reports/milestones/m3_diag); sharing one softmax keeps activations in the pre-trained range.
 
 Stream 2, Temporal Attention Module: self-attention over each character's ordered sub-action
 tokens; its context vector is fused into that character's tokens before injection.

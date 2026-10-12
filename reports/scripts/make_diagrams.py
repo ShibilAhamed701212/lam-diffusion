@@ -4,7 +4,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-F = os.path.join(os.path.dirname(__file__), "figs"); os.makedirs(F, exist_ok=True)
+F = os.path.join(os.path.dirname(__file__), "..", "figures"); os.makedirs(F, exist_ok=True)
 COL = {"in": "#e8f0fe", "plan": "#fff4d6", "enc": "#e3f5ea", "unet": "#e6e1f7", "out": "#fde8e8", "data": "#eef1f4"}
 EDGE = "#3b4252"
 

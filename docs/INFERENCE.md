@@ -5,7 +5,7 @@ There are three ways to run the trained model:
 2. **LAM Studio app**: the Next.js UI plus the FastAPI GPU server.
 3. **Kaggle**: free T4 GPUs, with the trained weights attached as a dataset.
 
-![Inference pipeline](../report/figs/d1_inference.png)
+![Inference pipeline](../reports/figures/d1_inference.png)
 
 ## Trained weights
 

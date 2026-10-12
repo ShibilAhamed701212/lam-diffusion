@@ -4,7 +4,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-D = os.path.join(os.path.dirname(__file__), "data"); F = os.path.join(os.path.dirname(__file__), "figs")
+D = os.path.join(os.path.dirname(__file__), "..", "data"); F = os.path.join(os.path.dirname(__file__), "..", "figures")
 os.makedirs(F, exist_ok=True)
 C = {"ours": "#2a6fdb", "base": "#9aa3ad", "warn": "#d9534f", "good": "#2e9e6b", "amber": "#e0a030", "ink": "#222"}
 plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.right": False, "axes.grid": True,

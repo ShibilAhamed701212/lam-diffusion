@@ -4,7 +4,7 @@ The paper calls for an **action-text corpus** for pre-training and an **anime ac
 for fine-tuning (§IV-B, §IV-F), but publishes neither (§III-B mentions the "scarcity of annotated datasets").
 This repo builds both.
 
-![Dataset statistics](../report/figs/f1_dataset.png)
+![Dataset statistics](../reports/figures/f1_dataset.png)
 
 ## 1. Anime action-pose-text triplets: 28,145 samples
 
@@ -21,7 +21,7 @@ Built in four resumable stages (`lam/data/`):
 | 3. Annotate | `annotate.py` | Builds the descriptor (Eq. 1's A) per image. **Poses:** RTMPose-x + a YOLOX detector trained on HumanArt (illustrations, including anime): 18 OpenPose keypoints per person. **Characters:** the *n* largest valid skeletons (n from the people-count tags), ordered left to right. **Attributes:** solo images use the human-written Danbooru tags; multi-character images run the **WD EVA02-large tagger on each person's crop**, so hair, eyes and outfit bind to the right character. **Global:** scene, style and props from the image tags. `tag_vocab.py` maps tags to fields. |
 | 4. Precompute | `precompute.py` | Per sample, once: SDXL-VAE latents at one of 7 aspect buckets (1024², 1152×896, 896×1152, 1216×832, 832×1216, 1344×768, 768×1344); a half-size ground-truth JPEG (for `L_perc` / `L_style`); the CLIP ViT-L/14 image embedding (for stage 2 and `L_action-img`); SDXL `time_ids`. Keypoints and boxes are re-expressed in the cropped frame. A size filter (every character ≥ 20% of frame height, the largest ≥ 35%) keeps **28,145**. The split is stratified by composition: **27,146 train / 999 test**. |
 
-`report.py` renders a stats sheet and a grid of annotated triplets for visual QA (`reports/m1/samples.jpg`).
+`report.py` renders a stats sheet and a grid of annotated triplets for visual QA (`reports/milestones/m1/samples.jpg`).
 
 ### Statistics (annotated set)
 
@@ -35,7 +35,7 @@ Built in four resumable stages (`lam/data/`):
 | With at least one action | 82.7% of characters |
 | Field coverage | outfit 97.5% · hair colour 94.4% · hair style 89.7% · expression 83.0% · eye colour 75.3% · extra 36.2% |
 
-![Most frequent first actions](../report/figs/f2_actions.png)
+![Most frequent first actions](../reports/figures/f2_actions.png)
 
 ### Record format
 

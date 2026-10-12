@@ -4,7 +4,7 @@ All training runs on a single cloud GPU. The repo's scripts drive Google Colab t
 `colab` command-line tool (`google-colab-cli`); the final full-U-Net run used an H200. Paths default to
 the Colab layout (`/content/data`, `/content/ckpt`), and every script takes flags to change them.
 
-![Training stages](../report/figs/d2_training.png)
+![Training stages](../reports/figures/d2_training.png)
 
 ## 0. Environment
 
@@ -43,7 +43,7 @@ don't move. **Gate:** it must beat the stock decoder on held-out anime crops.
 python -m lam.train_vae --out /content/ckpt/vae_anime     # 6,000 steps, batch 4 on a 24 GB L4
 ```
 
-![Stage 1](../report/figs/f3_stage1.png)
+![Stage 1](../reports/figures/f3_stage1.png)
 
 | | PSNR ↑ | LPIPS ↓ |
 |---|---|---|
@@ -62,7 +62,7 @@ Script: `lam/train_stage2a.py`. Corpus: HumanML3D captions. Four objectives:
 python -m lam.train_stage2a --out /content/ckpt/stage2a.pt     # 2,500 steps, batch 128
 ```
 
-![Stage 2a](../report/figs/f4_stage2a.png)
+![Stage 2a](../reports/figures/f4_stage2a.png)
 
 | | caption R@1 (1,000 motions) | sub-action order accuracy |
 |---|---|---|
@@ -77,7 +77,7 @@ the triplet's image, starting from stage 2a.
 python -m lam.train_stage2 --init /content/ckpt/stage2a.pt --out /content/ckpt/stage2_from2a.pt --steps 3000
 ```
 
-![Stage 2](../report/figs/f5_stage2.png)
+![Stage 2](../reports/figures/f5_stage2.png)
 
 Descriptor → image retrieval on the 999 held-out triplets:
 
@@ -103,13 +103,13 @@ LAM_GO=1 LAM_TOTAL_STEPS=11000 bash lam/jobs/phase_b.sh
 
 **Final run:** 11,000 optimizer steps, effective batch 4, on a single H200 (about 1.45 s/step, about 4.4 h).
 
-![Throughput](../report/figs/f8_throughput.png)
+![Throughput](../reports/figures/f8_throughput.png)
 
 ### Algorithm 1 head `G_θ` (`lam/train_inverse.py`)
 ConvNet + transformer on precomputed VAE latents → descriptor (presence, gender, age, framing, view, actions,
 box, keypoints, tag sets per field). 12 epochs, about 15 minutes on an L4.
 
-![G_θ](../report/figs/f6_inverse.png)
+![G_θ](../reports/figures/f6_inverse.png)
 
 | present | gender | framing | box L1 | action F1 |
 |---|---|---|---|---|

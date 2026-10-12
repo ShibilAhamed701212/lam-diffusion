@@ -58,7 +58,7 @@ The paper leaves some details open. These are the choices made, and why.
 ## Design history: the v3 conditioning
 
 The first full overfit check (16 training triplets) failed: no characters appeared, and the images turned into
-textures. Step-0 diagnosis (`lam/tests/diag_step0.py`, sheets in `reports/m3_diag/`) separated three causes.
+textures. Step-0 diagnosis (`lam/tests/diag_step0.py`, sheets in `reports/milestones/m3_diag/`) separated three causes.
 
 1. **A stale checkpoint.** An encoder checkpoint from an older design loaded large weights into layers the new design zero-initialises. Character tokens had norm 55–166, against 34 for text tokens. It produced the textures before any training.
 2. **Additive attention.** `out = Attn(text) + gate · Attn(action)` doubled the signal inside character boxes. As training grew the tokens (norm 10 → 45), images went muddy and sepia.
@@ -97,8 +97,7 @@ lam/                     the model (paper §IV)
 server/                  FastAPI inference API (planner + engines)
 web/                     Next.js app ("LAM Studio")
 scripts/                 Colab helpers (VM setup, jobs, keep-alive, uploads, Drive mount, samples)
-report/                  figure scripts + figures + logged stage results
-reports/                 diagnosis sheets and sample grids from every milestone
+reports/                 figures/ + data/ (raw results) + scripts/ (regenerate figures) + milestones/ (diagnosis sheets, sample grids)
 output/                  app demo video + sample generations
 docs/                    this documentation
 ```
