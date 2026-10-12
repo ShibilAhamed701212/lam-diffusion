@@ -10,6 +10,7 @@ Kaggle for weights and data. Nothing is duplicated across them.
 | `lam/`, `server/`, `web/`, `scripts/` | All code: model, training stages, dataset build, evaluation, app, cloud-GPU helpers |
 | `docs/` | Architecture, implementation, dataset, training, inference, results, this file |
 | `reports/figures/`, `reports/data/`, `reports/scripts/` | Report figures, the raw logged numbers behind them, and the scripts that regenerate them (stage results, leakage runs, colour factorial, dataset stats) |
+| `reports/analysis/` | Analysis figures (heat maps, confusion matrices, thresholds) and CSV tables from `reports/scripts/make_analysis.py` |
 | `reports/milestones/` | Diagnosis sheets and sample grids from every milestone (overfit failure, v3 fix, pilots, full-U-Net gate, final model, Kaggle precision checks) |
 | `output/` | App demo video and sample generations |
 

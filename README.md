@@ -63,6 +63,7 @@ More: [Architecture](docs/ARCHITECTURE.md) · [Paper → code](docs/IMPLEMENTATI
 ![Leakage across training](reports/figures/f7_leakage_progress.png)
 
 Full results, the diagnosis history (including what failed) and known limitations are in [docs/RESULTS.md](docs/RESULTS.md).
+Hypothesis tests, heat maps, threshold analysis and the improvement plan are in [docs/ANALYSIS.md](docs/ANALYSIS.md).
 The paper's §V-C metric suite (CLIP Score, FID, LPIPS, SSIM, binding precision) is implemented in `lam/eval/`.
 
 ## The app
@@ -136,6 +137,7 @@ docs/         architecture · implementation · dataset · training · inference
 | [TRAINING.md](docs/TRAINING.md) | Every stage with commands, settings and results; orchestration on cloud GPUs |
 | [INFERENCE.md](docs/INFERENCE.md) | Python API, Algorithm 1, the app and server, Kaggle |
 | [RESULTS.md](docs/RESULTS.md) | All metrics, qualitative sheets, failures and limitations |
+| [ANALYSIS.md](docs/ANALYSIS.md) | Hypotheses and verdicts, heat maps, confusion matrices, confidence thresholds, comparison tables, where to improve |
 | [ARTIFACTS.md](docs/ARTIFACTS.md) | Where every file lives: GitHub, Kaggle, and what was left out |
 
 ## Acknowledgements

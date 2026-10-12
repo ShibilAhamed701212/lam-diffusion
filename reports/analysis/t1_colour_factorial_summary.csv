@@ -1,0 +1,3 @@
+system,n,hair_acc,eye_acc,both_acc,mean_p_hair_requested,mean_p_eye_requested,distinct_hair_colours_produced
+LAM-Diffusion (trained),128,0.648,0.562,0.312,0.593,0.434,8
+Stock Animagine XL,128,1.0,0.484,0.484,0.921,0.348,8

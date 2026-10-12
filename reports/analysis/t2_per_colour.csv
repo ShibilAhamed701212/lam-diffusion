@@ -1,0 +1,17 @@
+colour_field,colour,lam_acc,baseline_acc
+hair,red,0.25,1.0
+hair,blue,0.062,1.0
+hair,green,0.812,1.0
+hair,purple,0.75,1.0
+hair,pink,0.75,1.0
+hair,blonde,1.0,1.0
+hair,white,1.0,1.0
+hair,black,0.562,1.0
+eye,red,0.312,0.438
+eye,blue,0.688,0.75
+eye,green,1.0,0.688
+eye,purple,0.75,0.688
+eye,pink,0.188,0.125
+eye,yellow,0.062,0.062
+eye,orange,0.75,0.688
+eye,brown,0.75,0.438

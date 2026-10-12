@@ -1,0 +1,9 @@
+requested,red,blue,green,purple,pink,blonde,white,black
+red,4,0,2,2,2,0,6,0
+blue,3,1,2,2,1,0,7,0
+green,2,0,13,0,1,0,0,0
+purple,1,0,2,12,0,0,1,0
+pink,0,0,1,2,12,0,1,0
+blonde,0,0,0,0,0,16,0,0
+white,0,0,0,0,0,0,16,0
+black,1,0,2,2,1,0,1,9

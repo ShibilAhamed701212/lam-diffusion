@@ -1,0 +1,17 @@
+field,system,threshold,share_correct_and_confident,mean_prob_requested
+hair,lam,0.3,0.648,0.593
+hair,lam,0.5,0.617,0.593
+hair,lam,0.7,0.555,0.593
+hair,lam,0.9,0.375,0.593
+hair,baseline,0.3,1.0,0.921
+hair,baseline,0.5,1.0,0.921
+hair,baseline,0.7,0.93,0.921
+hair,baseline,0.9,0.789,0.921
+eye,lam,0.3,0.547,0.434
+eye,lam,0.5,0.438,0.434
+eye,lam,0.7,0.266,0.434
+eye,lam,0.9,0.094,0.434
+eye,baseline,0.3,0.469,0.348
+eye,baseline,0.5,0.328,0.348
+eye,baseline,0.7,0.156,0.348
+eye,baseline,0.9,0.047,0.348
