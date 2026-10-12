@@ -1,0 +1,10 @@
+initialised LAM Encoder from /content/ckpt/stage2.pt
+Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /root/.cache/torch/hub/checkpoints/vgg16-397923af.pth
+step 50/300 pool=0.4 {'diff': 0.08778, 'action_img': 0.4851, 'perc': 0.04885, 'style': 1.507e-05, 'clip_sim': 0.1561} gate mean 0.998 max 1.015 | 0.04h
+step 100/300 pool=0.8 {'diff': 0.09669, 'action_img': 0.4187, 'perc': 0.05963, 'style': 8.932e-06, 'clip_sim': 0.3893} gate mean 0.994 max 1.027 | 0.07h
+step 150/300 pool=0.8 {'diff': 0.07973, 'action_img': 0.3867, 'perc': 0.0434, 'style': 7.723e-06, 'clip_sim': 0.2473} gate mean 0.993 max 1.034 | 0.11h
+step 200/300 pool=0.8 {'diff': 0.07967, 'action_img': 0.5087, 'perc': 0.04165, 'style': 5.634e-06, 'clip_sim': 0.3089} gate mean 0.991 max 1.035 | 0.15h
+step 250/300 pool=1.0 {'diff': 0.08472, 'action_img': 0.5438, 'perc': 0.04963, 'style': 7.21e-06, 'clip_sim': 0.3032} gate mean 0.990 max 1.035 | 0.19h
+step 300/300 pool=1.0 {'diff': 0.08685, 'action_img': 0.6565, 'perc': 0.04571, 'style': 5.043e-06, 'clip_sim': 0.2939} gate mean 0.990 max 1.035 | 0.23h
+checkpoint step000300 at step 300
+done at step 300

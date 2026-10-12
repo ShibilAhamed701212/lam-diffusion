@@ -1,0 +1,58 @@
+{
+  "prompt": "a boy and a girl holding hands walking in a park at sunset",
+  "seed": 1205,
+  "spec": {
+    "scene": "park, sunset, outdoors",
+    "style": "",
+    "props": [
+      "hand"
+    ],
+    "aspect": "landscape",
+    "characters": [
+      {
+        "gender": "male",
+        "age": "teen",
+        "hair_color": "",
+        "hair_style": "",
+        "eye_color": "",
+        "outfit": "",
+        "expression": "",
+        "action": "holding hands",
+        "extra": "",
+        "pose": "hands_on_hips",
+        "framing": "full_body",
+        "position": "left",
+        "mirror": false,
+        "bbox": [
+          0.108,
+          0.05,
+          0.392,
+          0.97
+        ]
+      },
+      {
+        "gender": "female",
+        "age": "teen",
+        "hair_color": "",
+        "hair_style": "",
+        "eye_color": "",
+        "outfit": "",
+        "expression": "",
+        "action": "holding hands",
+        "extra": "",
+        "pose": "hands_on_hips",
+        "framing": "full_body",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.608,
+          0.05,
+          0.892,
+          0.97
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1girl, 1boy, safe, holding hands, hands on hips, full body, hand, park, sunset, outdoors, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "a boy and a girl holding hands walking in a park at sunset, safe, masterpiece, high score, great score, absurdres"
+}

@@ -1,0 +1,22 @@
+# LAM-Diffusion: model, training and evaluation. Install a CUDA build of torch first (https://pytorch.org).
+torch>=2.3
+torchvision
+diffusers>=0.32
+transformers>=4.45
+accelerate>=0.34
+peft>=0.13
+safetensors
+bitsandbytes          # 8-bit / paged AdamW for full-U-Net training
+lpips                 # L_perc
+timm
+numpy
+pillow
+# dataset build (annotate.py): pose detection + tagger
+rtmlib
+onnxruntime-gpu
+opencv-python-headless
+# evaluation
+clean-fid
+# inference server (server/)
+fastapi>=0.110
+uvicorn>=0.29

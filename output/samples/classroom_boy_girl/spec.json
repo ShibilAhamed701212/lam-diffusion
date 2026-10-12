@@ -1,0 +1,56 @@
+{
+  "prompt": "a boy with black hair and a girl with pink twintails sitting side by side in a classroom, smiling",
+  "seed": 1207,
+  "spec": {
+    "scene": "classroom, desks, indoors",
+    "style": "",
+    "props": [],
+    "aspect": "landscape",
+    "characters": [
+      {
+        "gender": "male",
+        "age": "teen",
+        "hair_color": "black",
+        "hair_style": "short hair",
+        "eye_color": "",
+        "outfit": "school uniform",
+        "expression": "smiling",
+        "action": "",
+        "extra": "",
+        "pose": "hands_on_hips",
+        "framing": "full_body",
+        "position": "left",
+        "mirror": false,
+        "bbox": [
+          0.108,
+          0.05,
+          0.392,
+          0.97
+        ]
+      },
+      {
+        "gender": "female",
+        "age": "teen",
+        "hair_color": "pink",
+        "hair_style": "long hair, twintails",
+        "eye_color": "",
+        "outfit": "school uniform",
+        "expression": "smiling",
+        "action": "",
+        "extra": "",
+        "pose": "hands_on_hips",
+        "framing": "full_body",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.608,
+          0.05,
+          0.892,
+          0.97
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1girl, 1boy, safe, black hair, short hair, school uniform, smiling, hands on hips, pink hair, long hair, twintails, full body, classroom, desks, indoors, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "a boy with black hair and a girl with pink twintails sitting side by side in a classroom, smiling, safe, masterpiece, high score, great score, absurdres"
+}

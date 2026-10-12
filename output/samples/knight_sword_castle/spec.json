@@ -1,0 +1,35 @@
+{
+  "prompt": "a knight girl in silver armor pointing a sword forward, castle at sunset",
+  "seed": 1203,
+  "spec": {
+    "scene": "castle, sunset, outdoors",
+    "style": "detailed, dramatic lighting",
+    "props": [],
+    "aspect": "landscape",
+    "characters": [
+      {
+        "gender": "female",
+        "age": "young_adult",
+        "hair_color": "black",
+        "hair_style": "long hair, braids",
+        "eye_color": "amber",
+        "outfit": "silver armor, sword",
+        "expression": "focused",
+        "action": "pointing sword forward",
+        "extra": "",
+        "pose": "pointing",
+        "framing": "portrait",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.213,
+          0.05,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1girl, solo, safe, black hair, long hair, braids, amber eyes, silver armor, sword, focused, pointing sword forward, pointing, portrait, castle, sunset, outdoors, detailed, dramatic lighting, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "a knight girl in silver armor pointing a sword forward, castle at sunset, safe, masterpiece, high score, great score, absurdres"
+}

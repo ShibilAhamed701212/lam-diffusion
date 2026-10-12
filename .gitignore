@@ -1,0 +1,38 @@
+# Secrets: the GPU server's tunnel URL + token (written by scripts/colab_up.sh)
+.env
+.env.*
+**/.env.local*
+
+# Model weights and data are too large for git: they live on Kaggle (see README)
+checkpoints/
+*.safetensors
+*.pt
+*.ckpt
+*.npz
+
+# Colab keep-alive bookkeeping
+.keepalive*
+
+# Bundles / archives
+*.tgz
+*.tar
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# OS / editors
+.DS_Store
+.claude/
+.vscode/
+.idea/

@@ -1,0 +1,37 @@
+{
+  "prompt": "an elderly man with a white beard sitting on a bench reading a book",
+  "seed": 1206,
+  "spec": {
+    "scene": "garden, bench, outdoors",
+    "style": "",
+    "props": [
+      "book"
+    ],
+    "aspect": "portrait",
+    "characters": [
+      {
+        "gender": "male",
+        "age": "elderly",
+        "hair_color": "white",
+        "hair_style": "short hair",
+        "eye_color": "",
+        "outfit": "",
+        "expression": "serious",
+        "action": "reading book",
+        "extra": "white beard",
+        "pose": "holding_object",
+        "framing": "full_body",
+        "position": "center",
+        "mirror": false,
+        "bbox": [
+          0.197,
+          0.05,
+          0.803,
+          0.97
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1boy, solo, male focus, safe, old man, old, wrinkled skin, white hair, short hair, serious, reading book, white beard, holding, full body, book, garden, bench, outdoors, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "an elderly man with a white beard sitting on a bench reading a book, safe, masterpiece, high score, great score, absurdres"
+}

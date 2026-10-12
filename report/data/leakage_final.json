@@ -1,0 +1,13 @@
+{
+ "n": 40,
+ "results": {
+  "final": {
+   "hair_orig": 0.625,
+   "hair_eyeswap": 0.575,
+   "eye_orig": 0.425,
+   "eye_hairswap": 0.325,
+   "hair_leak": 0.05,
+   "eye_leak": 0.1
+  }
+ }
+}

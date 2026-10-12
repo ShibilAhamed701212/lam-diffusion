@@ -1,0 +1,167 @@
+{
+ "images": 29785,
+ "characters": 50677,
+ "composition": [
+  [
+   "solo_m",
+   7394
+  ],
+  [
+   "solo_f",
+   5952
+  ],
+  [
+   "duo_mf",
+   5561
+  ],
+  [
+   "trio",
+   4453
+  ],
+  [
+   "duo_ff",
+   3391
+  ],
+  [
+   "duo_mm",
+   3034
+  ]
+ ],
+ "gender": [
+  [
+   "female",
+   27258
+  ],
+  [
+   "male",
+   23419
+  ]
+ ],
+ "age": [
+  [
+   "unspecified",
+   46155
+  ],
+  [
+   "child",
+   3051
+  ],
+  [
+   "elderly",
+   743
+  ],
+  [
+   "adult",
+   728
+  ]
+ ],
+ "framing": [
+  [
+   "full_body",
+   26975
+  ],
+  [
+   "upper_body",
+   10617
+  ],
+  [
+   "cowboy_shot",
+   9570
+  ],
+  [
+   "portrait",
+   3515
+  ]
+ ],
+ "first_action": [
+  [
+   "<none>",
+   8770
+  ],
+  [
+   "standing",
+   8228
+  ],
+  [
+   "holding",
+   7149
+  ],
+  [
+   "sitting",
+   5562
+  ],
+  [
+   "hand_up",
+   1787
+  ],
+  [
+   "lying",
+   1134
+  ],
+  [
+   "v",
+   1087
+  ],
+  [
+   "walking",
+   971
+  ],
+  [
+   "hands_up",
+   943
+  ],
+  [
+   "crossed_arms",
+   882
+  ],
+  [
+   "hug",
+   874
+  ],
+  [
+   "arm_up",
+   796
+  ],
+  [
+   "pointing",
+   690
+  ],
+  [
+   "squatting",
+   652
+  ],
+  [
+   "hand_in_pocket",
+   630
+  ],
+  [
+   "own_hands_together",
+   554
+  ],
+  [
+   "carrying",
+   526
+  ],
+  [
+   "running",
+   480
+  ],
+  [
+   "hands_in_pockets",
+   456
+  ],
+  [
+   "kneeling",
+   438
+  ]
+ ],
+ "field_coverage": {
+  "hair_color": 0.944,
+  "hair_style": 0.897,
+  "eye_color": 0.753,
+  "outfit": 0.975,
+  "expression": 0.83,
+  "extra": 0.362
+ },
+ "with_actions": 0.827
+}

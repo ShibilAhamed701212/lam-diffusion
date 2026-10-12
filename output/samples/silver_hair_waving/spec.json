@@ -1,0 +1,35 @@
+{
+  "prompt": "an anime girl with long silver hair and blue eyes waving, school uniform, cherry blossom park",
+  "seed": 1204,
+  "spec": {
+    "scene": "cherry blossoms, park, outdoors, petals",
+    "style": "anime",
+    "props": [],
+    "aspect": "landscape",
+    "characters": [
+      {
+        "gender": "female",
+        "age": "young_adult",
+        "hair_color": "silver",
+        "hair_style": "long hair, twintails",
+        "eye_color": "blue",
+        "outfit": "school uniform",
+        "expression": "wave",
+        "action": "",
+        "extra": "",
+        "pose": "waving",
+        "framing": "full_body",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.528,
+          0.05,
+          0.812,
+          0.97
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1girl, solo, safe, silver hair, long hair, twintails, blue eyes, school uniform, wave, waving, full body, cherry blossoms, park, outdoors, petals, anime, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "an anime girl with long silver hair and blue eyes waving, school uniform, cherry blossom park, safe, masterpiece, high score, great score, absurdres"
+}

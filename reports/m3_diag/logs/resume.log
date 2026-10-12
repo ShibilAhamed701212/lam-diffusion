@@ -1,0 +1,243 @@
+images to fetch: 29785
+=== fetch
+indexed 100/1000 shards, 5071 wanted ids found
+indexed 200/1000 shards, 7584 wanted ids found
+indexed 300/1000 shards, 12205 wanted ids found
+indexed 400/1000 shards, 17113 wanted ids found
+indexed 500/1000 shards, 22136 wanted ids found
+indexed 600/1000 shards, 24392 wanted ids found
+indexed 700/1000 shards, 26067 wanted ids found
+indexed 800/1000 shards, 27702 wanted ids found
+indexed 900/1000 shards, 29073 wanted ids found
+indexed 1000/1000 shards, 29785 wanted ids found
+29785/29785 selected ids present in danbooru2024-sfw
+29785 images still to download
+resolved 994 shard URLs
+chunk 1/80 {'ok': 373}
+chunk 2/80 {'ok': 746}
+chunk 3/80 {'ok': 1119}
+chunk 4/80 {'ok': 1492}
+chunk 5/80 {'ok': 1865}
+chunk 6/80 {'ok': 2238}
+chunk 7/80 {'ok': 2611}
+chunk 8/80 {'ok': 2984}
+chunk 9/80 {'ok': 3357}
+chunk 10/80 {'ok': 3730}
+/usr/local/lib/python3.13/dist-packages/PIL/TiffImagePlugin.py:950: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+/usr/local/lib/python3.13/dist-packages/PIL/TiffImagePlugin.py:950: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+chunk 11/80 {'ok': 4103}
+chunk 12/80 {'ok': 4476}
+chunk 13/80 {'ok': 4849}
+chunk 14/80 {'ok': 5222}
+chunk 15/80 {'ok': 5595}
+chunk 16/80 {'ok': 5968}
+chunk 17/80 {'ok': 6341}
+chunk 18/80 {'ok': 6714}
+chunk 19/80 {'ok': 7087}
+chunk 20/80 {'ok': 7460}
+chunk 21/80 {'ok': 7832}
+chunk 22/80 {'ok': 8205}
+chunk 23/80 {'ok': 8578}
+chunk 24/80 {'ok': 8951}
+chunk 25/80 {'ok': 9323}
+chunk 26/80 {'ok': 9695}
+chunk 27/80 {'ok': 10068}
+chunk 28/80 {'ok': 10440}
+chunk 29/80 {'ok': 10813}
+chunk 30/80 {'ok': 11185}
+/usr/local/lib/python3.13/dist-packages/PIL/TiffImagePlugin.py:950: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+chunk 31/80 {'ok': 11557}
+chunk 32/80 {'ok': 11929}
+chunk 33/80 {'ok': 12301}
+chunk 34/80 {'ok': 12673}
+chunk 35/80 {'ok': 13045}
+chunk 36/80 {'ok': 13417}
+chunk 37/80 {'ok': 13789}
+chunk 38/80 {'ok': 14161}
+chunk 39/80 {'ok': 14533}
+chunk 40/80 {'ok': 14905}
+chunk 41/80 {'ok': 15277}
+chunk 42/80 {'ok': 15649}
+chunk 43/80 {'ok': 16021}
+chunk 44/80 {'ok': 16393}
+chunk 45/80 {'ok': 16765}
+chunk 46/80 {'ok': 17137}
+chunk 47/80 {'ok': 17509}
+chunk 48/80 {'ok': 17881}
+chunk 49/80 {'ok': 18253}
+chunk 50/80 {'ok': 18625}
+chunk 51/80 {'ok': 18997}
+chunk 52/80 {'ok': 19369}
+chunk 53/80 {'ok': 19741}
+chunk 54/80 {'ok': 20113}
+chunk 55/80 {'ok': 20485}
+chunk 56/80 {'ok': 20857}
+chunk 57/80 {'ok': 21229}
+chunk 58/80 {'ok': 21601}
+chunk 59/80 {'ok': 21973}
+chunk 60/80 {'ok': 22345}
+/usr/local/lib/python3.13/dist-packages/PIL/TiffImagePlugin.py:950: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+chunk 61/80 {'ok': 22717}
+chunk 62/80 {'ok': 23089}
+chunk 63/80 {'ok': 23461}
+chunk 64/80 {'ok': 23833}
+chunk 65/80 {'ok': 24205}
+chunk 66/80 {'ok': 24577}
+chunk 67/80 {'ok': 24949}
+chunk 68/80 {'ok': 25321}
+chunk 69/80 {'ok': 25693}
+chunk 70/80 {'ok': 26065}
+/usr/local/lib/python3.13/dist-packages/PIL/TiffImagePlugin.py:950: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+chunk 71/80 {'ok': 26437}
+chunk 72/80 {'ok': 26809}
+chunk 73/80 {'ok': 27181}
+chunk 74/80 {'ok': 27553}
+chunk 75/80 {'ok': 27925}
+chunk 76/80 {'ok': 28297}
+chunk 77/80 {'ok': 28669}
+chunk 78/80 {'ok': 29041}
+chunk 79/80 {'ok': 29413}
+chunk 80/80 {'ok': 29785}
+done {'ok': 29785}
+=== precompute
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights:  70%|███████   | 275/392 [00:00<00:00, 2733.20it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 2754.76it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+size filter kept 28145/29785
+/content/lam_studio/lam/data/precompute.py:142: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  px = torch.stack([torch.from_numpy(np.asarray(im)).permute(2, 0, 1) for im in imgs]).to(dev, torch.float16)
+precomputed 2000/28145
+precomputed 4003/28145
+precomputed 6005/28145
+precomputed 8005/28145
+precomputed 10005/28145
+precomputed 12000/28145
+precomputed 14000/28145
+precomputed 16000/28145
+precomputed 18001/28145
+precomputed 20001/28145
+precomputed 22001/28145
+precomputed 24001/28145
+precomputed 26005/28145
+precomputed 28007/28145
+done 28145 test 999
+105 pose entries; [(13103, 'standing'), (5653, 'holding'), (4880, 'sitting'), (1191, 'hand_up'), (837, 'walking'), (833, 'lying'), (778, 'v'), (719, 'crossed_arms'), (697, 'hands_up'), (645, 'arm_up'), (594, 'hug'), (578, 'hand_in_pocket'), (557, 'squatting'), (535, 'pointing'), (435, 'own_hands_together')]
+=== continue M3
+=== M3a overfit
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 2964.76it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 168/517 [00:00<00:00, 1623.02it/s]Loading weights:  67%|██████▋   | 346/517 [00:00<00:00, 1674.24it/s]Loading weights:  99%|█████████▉| 514/517 [00:00<00:00, 1666.49it/s]Loading weights: 100%|██████████| 517/517 [00:00<00:00, 1670.44it/s]
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3270.66it/s]
+[transformers] [1mCLIPTextModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+initialised LAM Encoder from /content/ckpt/stage2.pt
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 305/392 [00:00<00:00, 3049.54it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 3151.41it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /root/.cache/torch/hub/checkpoints/vgg16-397923af.pth
+  0%|          | 0.00/528M [00:00<?, ?B/s]  4%|▍         | 22.6M/528M [00:00<00:02, 236MB/s]  9%|▊         | 46.1M/528M [00:00<00:02, 242MB/s] 13%|█▎        | 69.6M/528M [00:00<00:01, 244MB/s] 18%|█▊        | 92.9M/528M [00:00<00:01, 243MB/s] 22%|██▏       | 116M/528M [00:00<00:01, 243MB/s]  26%|██▋       | 140M/528M [00:00<00:01, 243MB/s] 31%|███       | 163M/528M [00:00<00:01, 244MB/s] 35%|███▌      | 186M/528M [00:00<00:01, 244MB/s] 40%|███▉      | 210M/528M [00:00<00:01, 245MB/s] 44%|████▍     | 233M/528M [00:01<00:01, 245MB/s] 49%|████▊     | 257M/528M [00:01<00:01, 245MB/s] 53%|█████▎    | 280M/528M [00:01<00:01, 245MB/s] 58%|█████▊    | 304M/528M [00:01<00:00, 245MB/s] 62%|██████▏   | 327M/528M [00:01<00:00, 244MB/s] 66%|██████▋   | 351M/528M [00:01<00:00, 244MB/s] 71%|███████   | 374M/528M [00:01<00:00, 244MB/s] 75%|███████▌  | 397M/528M [00:01<00:00, 244MB/s] 80%|███████▉  | 421M/528M [00:01<00:00, 233MB/s] 84%|████████▍ | 443M/528M [00:01<00:00, 234MB/s] 88%|████████▊ | 466M/528M [00:02<00:00, 234MB/s] 93%|█████████▎| 489M/528M [00:02<00:00, 236MB/s] 97%|█████████▋| 512M/528M [00:02<00:00, 238MB/s]100%|██████████| 528M/528M [00:02<00:00, 241MB/s]
+step 50/300 pool=0.4 {'diff': 0.08778, 'action_img': 0.4851, 'perc': 0.04885, 'style': 1.507e-05, 'clip_sim': 0.1561} gate mean 0.998 max 1.015 | 0.04h
+step 100/300 pool=0.8 {'diff': 0.09669, 'action_img': 0.4187, 'perc': 0.05963, 'style': 8.932e-06, 'clip_sim': 0.3893} gate mean 0.994 max 1.027 | 0.07h
+step 150/300 pool=0.8 {'diff': 0.07973, 'action_img': 0.3867, 'perc': 0.0434, 'style': 7.723e-06, 'clip_sim': 0.2473} gate mean 0.993 max 1.034 | 0.11h
+step 200/300 pool=0.8 {'diff': 0.07967, 'action_img': 0.5087, 'perc': 0.04165, 'style': 5.634e-06, 'clip_sim': 0.3089} gate mean 0.991 max 1.035 | 0.15h
+step 250/300 pool=1.0 {'diff': 0.08472, 'action_img': 0.5438, 'perc': 0.04963, 'style': 7.21e-06, 'clip_sim': 0.3032} gate mean 0.990 max 1.035 | 0.19h
+step 300/300 pool=1.0 {'diff': 0.08685, 'action_img': 0.6565, 'perc': 0.04571, 'style': 5.043e-06, 'clip_sim': 0.2939} gate mean 0.990 max 1.035 | 0.23h
+checkpoint step000300 at step 300
+done at step 300
+=== OVERFIT DONE
+=== M2 stage 2 (new encoder)

@@ -1,0 +1,56 @@
+{
+  "prompt": "two girls jumping happily on a beach, summer, bright sunlight",
+  "seed": 1202,
+  "spec": {
+    "scene": "beach, summer, sunlight",
+    "style": "bright sunlight",
+    "props": [],
+    "aspect": "landscape",
+    "characters": [
+      {
+        "gender": "female",
+        "age": "teen",
+        "hair_color": "auburn",
+        "hair_style": "long hair, braids",
+        "eye_color": "brown",
+        "outfit": "",
+        "expression": "happy",
+        "action": "jumping",
+        "extra": "",
+        "pose": "jumping",
+        "framing": "full_body",
+        "position": "left",
+        "mirror": false,
+        "bbox": [
+          0.108,
+          0.05,
+          0.392,
+          0.97
+        ]
+      },
+      {
+        "gender": "female",
+        "age": "teen",
+        "hair_color": "blonde",
+        "hair_style": "long hair, pigtails",
+        "eye_color": "hazel",
+        "outfit": "",
+        "expression": "happy",
+        "action": "jumping",
+        "extra": "",
+        "pose": "jumping",
+        "framing": "full_body",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.608,
+          0.05,
+          0.892,
+          0.97
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "2girls, multiple girls, safe, auburn hair, long hair, braids, brown eyes, happy, jumping, blonde hair, long hair, pigtails, hazel eyes, full body, beach, summer, sunlight, bright sunlight, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "two girls jumping happily on a beach, summer, bright sunlight, safe, masterpiece, high score, great score, absurdres"
+}

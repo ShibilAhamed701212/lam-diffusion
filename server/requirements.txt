@@ -1,0 +1,8 @@
+# Colab already ships torch, numpy, pillow and opencv.
+diffusers>=0.32
+transformers>=4.45
+accelerate>=0.34
+peft>=0.13
+safetensors
+fastapi>=0.110
+uvicorn>=0.29

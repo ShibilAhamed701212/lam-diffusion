@@ -1,0 +1,37 @@
+{
+  "prompt": "an anime girl reading a book under a cherry blossom tree",
+  "seed": 1201,
+  "spec": {
+    "scene": "cherry blossoms, tree, outdoors, petals",
+    "style": "anime style",
+    "props": [
+      "book"
+    ],
+    "aspect": "portrait",
+    "characters": [
+      {
+        "gender": "female",
+        "age": "young_adult",
+        "hair_color": "",
+        "hair_style": "long hair, braid",
+        "eye_color": "",
+        "outfit": "school uniform, red ribbon",
+        "expression": "reading book",
+        "action": "reading book",
+        "extra": "",
+        "pose": "arms_up",
+        "framing": "portrait",
+        "position": "right",
+        "mirror": false,
+        "bbox": [
+          0.195,
+          0.05,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "conditioning_prompt": "1girl, solo, safe, long hair, braid, school uniform, red ribbon, reading book, arms up, portrait, book, cherry blossoms, tree, outdoors, petals, anime style, masterpiece, high score, great score, absurdres",
+  "baseline_prompt": "an anime girl reading a book under a cherry blossom tree, safe, masterpiece, high score, great score, absurdres"
+}
