@@ -28,7 +28,7 @@ attached to the right character.
   - Algorithm 1 (image → actions → image).
 - **A fully trained model.** Animagine XL 4.0 with **every U-Net weight trained** (not LoRA) jointly with the LAM Encoder, 11,000 steps on an H200.
 - **A new dataset: 28,145 anime action-pose-text triplets.** 50,677 characters with 18-point skeletons, boxes, ordered actions and per-character attributes, from a balanced Danbooru selection. Plus 11,254 ordered action sequences from HumanML3D captions for pre-training.
-- **Measured attribute control.** Colour leakage drops from 0.125 / 0.375 (hair / eye) to **0.05 / 0.10**. Descriptor → image retrieval reaches **R@1 83%**. The temporal module orders sub-actions at **77%** (chance 50%).
+- **Measured, including where it falls short.** Colour leakage drops from 0.125 / 0.375 (hair / eye) to **0.05 / 0.10**. Descriptor → image retrieval reaches **R@1 83%**, and the temporal module orders sub-actions at **77%** (chance 50%). But absolute **hair-colour accuracy is below stock Animagine** (64.8% vs 100%) on an 8×8 colour test; see [Results](docs/RESULTS.md#colour-factorial-vs-stock-animagine).
 - **LAM Studio, a web app** (Next.js + FastAPI) to describe a scene, edit the planned layout and poses, and generate next to a prompt-only baseline.
 
 ## How it works
@@ -58,6 +58,7 @@ More: [Architecture](docs/ARCHITECTURE.md) · [Paper → code](docs/IMPLEMENTATI
 | 2 · LAM on anime triplets | descriptor → image R@1 / R@10 (999 test) | 4.9% / 18.6% | **83.0% / 97.6%** |
 | Algorithm 1 head `G_θ` | presence / gender / box L1 | — | 90.9% / 70.3% / 0.088 |
 | 3–5 · full U-Net, 11k steps | hair / eye colour leakage (lower is better) | 0.125 / 0.375 | **0.05 / 0.10** |
+| 3–5 · full U-Net, 11k steps | hair / eye colour correct, 8×8 factorial (stock Animagine → ours) | 100% / 48.4% | 64.8% / 56.2% |
 
 ![Leakage across training](report/figs/f7_leakage_progress.png)
 

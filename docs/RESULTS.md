@@ -13,6 +13,7 @@ All numbers come from logged runs. The raw values are in `report/data/*.json`, a
 | 2 · LAM on anime triplets | descriptor → image retrieval R@1 / R@10 (999 test) | 4.9% / 18.6% | **83.0% / 97.6%** |
 | Algorithm 1 head `G_θ` | presence / gender / box L1 / action F1 | — | 90.9% / 70.3% / 0.088 / 0.258 |
 | 3–5 · full U-Net (11k steps) | hair-colour leak / eye-colour leak (lower is better) | 0.125 / 0.375 | **0.05 / 0.10** |
+| 3–5 · full U-Net (11k steps) | 8×8 colour factorial: hair / eye correct, vs stock Animagine | 100% / 48.4% (stock) | 64.8% / 56.2% |
 
 ## Attribute control after full training
 
@@ -73,13 +74,35 @@ muddy texture by step 200. Diffusion-only and 10× lower auxiliary weights both 
 ground truth. [`reports/phaseB/`](../reports/phaseB) is the first sample grid of the full run.
 [`reports/kaggle/`](../reports/kaggle) holds fp16 / bf16 precision checks of the trained model on Kaggle T4s.
 
+## Colour factorial vs stock Animagine
+
+Kaggle notebook `lam-eval` (2× T4): one character on a plain background, **8 hair colours × 8 eye colours ×
+2 seeds**, 20 steps. It's rendered by the trained model (from the descriptor) and by stock Animagine XL
+(prompt only, same seed). A CLIP zero-shot classifier reads hair and eye colour. Raw scores:
+[`report/data/colour_factorial.json`](../report/data/colour_factorial.json).
+
+| System | hair colour correct | eye colour correct | both correct |
+|---|---|---|---|
+| LAM-Diffusion (trained, 11k steps) | 64.8% | **56.2%** | 31.2% |
+| Stock Animagine XL (prompt only) | **100%** | 48.4% | **48.4%** |
+
+**This is a negative result for hair colour.** The trained model is slightly better on eye colour, but much worse
+on hair. It collapses some requested colours to white or silver: red is correct 25% of the time, blue 6%, black
+56%. Green, purple and pink are 75–81%, and blonde and white 100%. The leakage probe above measures something
+different (whether changing one attribute moves the other), so the two results don't contradict each other. They
+do mean the model doesn't yet beat its base on absolute colour accuracy. Likely causes:
+- a bias toward silver/white hair in the training labels or the data;
+- weakening of the base model's colour vocabulary during full-U-Net training;
+- CLIP misreading stylised hair.
+
+These have not been separated yet.
+
 ## Paper metrics (§V-C)
 
 `lam/eval/generate.py` + `lam/eval/metrics.py` compute CLIP Score, FID / KID, LPIPS, SSIM, attribute-binding
 precision/recall and pose PCK@0.1 for the prompt-only baseline, the §V-style ControlNet system, the trained
-model and its ablations (no region masks, no temporal stream, action stream off). A colour-factorial evaluation
-against stock Animagine was **still running on Kaggle** when this was written, so those numbers aren't
-reported here.
+model and its ablations (no region masks, no temporal stream, action stream off). That full suite hasn't been run
+on the final weights yet.
 
 The paper's headline numbers (CLIP 0.87, FID 18.4, LPIPS 0.32, SSIM 0.91, binding 0.94) came from its
 inference-only §V setup and **are not reproduced or compared here**.
@@ -101,6 +124,7 @@ These failures are why the paper moves to a learned §IV model.
 ## Known limitations
 
 - **Pose following and character counts are partial.** Cross-attention-only pose conditioning (the paper's design) is weaker than ControlNet.
+- **Hair-colour accuracy is below the base model** (64.8% vs 100% for stock Animagine). Red and blue hair often come out white or silver.
 - **Some eye → hair colour leakage remains** (0.10 eye leak).
 - **Identical-looking characters** in multi-character scenes.
 - **Noisy labels:** the descriptors come from a tagger and a pose detector, and are noisiest in multi-character images.
