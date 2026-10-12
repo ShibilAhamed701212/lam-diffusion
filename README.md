@@ -131,6 +131,8 @@ docs/         architecture · implementation · dataset · training · inference
 
 | Doc | Contents |
 |---|---|
+| [METHODOLOGY.md](docs/METHODOLOGY.md) | Methodology report: research questions, data / model / training / evaluation methods, validation ladder, threats to validity |
+| [WORKFLOW.md](docs/WORKFLOW.md) | End-to-end workflow diagrams: pipeline, step-by-step commands and gates, development, compute, serving and publishing |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | The four blocks, tensor shapes, conditioning maths, loss |
 | [IMPLEMENTATION.md](docs/IMPLEMENTATION.md) | Paper → code map, interpretation choices, additions and deviations, design history |
 | [DATASET.md](docs/DATASET.md) | How the triplet dataset and the action-text corpus are built, with statistics and format |
