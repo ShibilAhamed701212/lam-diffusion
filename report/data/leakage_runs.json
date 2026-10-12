@@ -1,0 +1,29 @@
+{
+ "n": 40,
+ "results": {
+  "baseline": {
+   "hair_orig": 0.55,
+   "hair_eyeswap": 0.425,
+   "eye_orig": 0.65,
+   "eye_hairswap": 0.275,
+   "hair_leak": 0.125,
+   "eye_leak": 0.375
+  },
+  "lora_noswap": {
+   "hair_orig": 0.475,
+   "hair_eyeswap": 0.45,
+   "eye_orig": 0.45,
+   "eye_hairswap": 0.275,
+   "hair_leak": 0.025,
+   "eye_leak": 0.175
+  },
+  "lora_swap": {
+   "hair_orig": 0.475,
+   "hair_eyeswap": 0.425,
+   "eye_orig": 0.525,
+   "eye_hairswap": 0.275,
+   "hair_leak": 0.05,
+   "eye_leak": 0.25
+  }
+ }
+}

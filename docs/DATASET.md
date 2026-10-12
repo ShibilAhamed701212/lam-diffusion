@@ -88,7 +88,7 @@ The phrasing varies ("grandpa", "old man", "a guy"), and a fraction get characte
 |---|---|
 | Descriptors, split, pose library, stats (no images) | Kaggle: [`shibilahamed0095/lam-diffusion-descriptors`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-descriptors) |
 | Rebuild from scratch | `python -m lam.data.select` → `fetch` → `annotate` → `precompute` (GPU for annotate/precompute) |
-| Precomputed latents | Not published (about 6 GB, derived from the images). Rebuild with `precompute.py`. |
+| Precomputed training set (5.7 GB tar: SDXL latents, half-size ground-truth JPEGs, CLIP embeddings, `index.jsonl`) | Kaggle: [`shibilahamed0095/lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed). Extract to `/content/data` (or pass `--samples`). |
 
 **Licensing:** the annotations are derived from Danbooru metadata and model predictions. The underlying artworks
 belong to their respective artists. Use the descriptors for research, and fetch images from the original source

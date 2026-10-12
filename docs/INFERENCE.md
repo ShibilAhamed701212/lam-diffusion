@@ -15,9 +15,11 @@ There are three ways to run the trained model:
 | `weights.pt` | 325 MB | Everything else that was trained: LAM Encoder, text-encoder LoRA, dual-stream processors, gates |
 | `pose_library.json` | 0.3 MB | Data-mined skeletons per action (planner path) |
 | `inverse.pt` | 138 MB | Algorithm 1 head `G_θ` (image latent → descriptor) |
+| `vae_anime/` | 320 MB | Stage 1 anime VAE decoder (pass `vae_path=` to `LAMDiffusionPipeline`) |
+| `stage2a.pt`, `stage2_from2a.pt` | 509 MB each | Encoder checkpoints after stage 2a and stage 2 (to reproduce or resume the stages) |
 
 The first three are on Kaggle in [`shibilahamed0095/lam-diffusion-final`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-final),
-and `G_θ` is in [`shibilahamed0095/lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras).
+and `G_θ`, the anime VAE and the stage checkpoints are in [`shibilahamed0095/lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras).
 For a diffusers-style folder, put `unet_config.json` → `config.json` and `unet.safetensors` →
 `diffusion_pytorch_model.safetensors` in one directory.
 

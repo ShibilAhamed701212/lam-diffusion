@@ -42,7 +42,7 @@ accuracy drops when one is swapped.
 | LoRA + swap-consistency loss (~150 steps) | 0.05 | 0.25 |
 | **Final full U-Net (11,000 steps)** | **0.05** | **0.10** |
 
-At n = 40, a difference of 0.025 is one image, so read these as trends.
+At n = 40, a difference of 0.025 is one image, so read these as trends. Raw numbers: `report/data/leakage_runs.json` (earlier runs) and `report/data/leakage_final.json`.
 
 ## Training-stage curves
 
