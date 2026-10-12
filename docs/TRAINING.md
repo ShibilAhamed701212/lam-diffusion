@@ -28,7 +28,9 @@ python -m lam.data.precompute    # latents, CLIP embeddings, split   (GPU)
 python -m lam.pose_library       # k-means skeletons per action
 ```
 
-See [DATASET.md](DATASET.md). `lam/jobs/prep_data.sh` chains these from a saved annotation bundle.
+See [DATASET.md](DATASET.md). To skip the build, download the ready-made set from Kaggle
+([`lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed)) and point
+the scripts at it with `--index` / `--samples`.
 
 ## 2. Stages
 
@@ -96,7 +98,7 @@ Optimiser: paged 8-bit AdamW; U-Net LR 1e-5 (no weight decay); new modules 1e-4;
 # 16-sample overfit gate first (must reproduce its training samples)
 bash lam/jobs/a100_full.sh overfit
 # then the full run (resumable; checkpoints every 30 min)
-LAM_TOTAL_STEPS=11000 bash lam/jobs/phase_b.sh
+LAM_GO=1 LAM_TOTAL_STEPS=11000 bash lam/jobs/phase_b.sh
 ```
 
 **Final run:** 11,000 optimizer steps, effective batch 4, on a single H200 (about 1.45 s/step, about 4.4 h).
@@ -126,10 +128,11 @@ Qwen2.5-3B-Instruct + LoRA on (request → descriptor) pairs from `planner_data.
 | `scripts/colab_job.sh start NAME cmd…` | Sync code and run a job in the background on the VM (`log`, `status`, `pull`) |
 | `scripts/colab_keepalive.sh` | Colab reclaims a VM about 20 min after the last *cell execution*, even if a job is running. This pings it every 3 min. |
 | `scripts/colab_upload_big.sh` | Split, upload and verify large files (the upload endpoint rejects big files) |
-| `scripts/drive_mount.py` | Mount Google Drive on a CLI session without the Enter-key race |
-| `lam/jobs/drive_data.sh` | Save / restore the dataset and checkpoints to Google Drive, so any VM resumes in minutes |
-| `lam/jobs/phase_a.sh` | Stage 1 → 2a → 2, each saved to Drive; reruns skip finished stages |
-| `lam/jobs/phase_b.sh` | Full-U-Net overfit gate, then the full run with Drive backup every 30 min and auto-resume |
+| `scripts/drive_mount.py`, `lam/jobs/drive_data.sh` | Optional backup mount: save and restore the dataset and checkpoints so a fresh VM resumes in minutes |
+| `lam/jobs/paper_stages.sh` | Stage 1 → 2a → 2 → `G_θ` in one go; skips finished stages |
+| `lam/jobs/phase_a.sh` | Stage 1 → 2a → 2 with optional backup and restore; reruns skip finished stages |
+| `lam/jobs/phase_b.sh` | Full-U-Net overfit gate, then the full run; auto-resumes, with optional backup every 30 min |
+| `lam/jobs/diag_m3b.sh` | Conditioning check: smoke test, step-0 renders, 600-step overfit, trained-checkpoint render |
 | `lam/jobs/a100_full.sh` | Overfit gate / one resumable chunk of the full run |
 
 ## 4. Checks along the way (`lam/tests/`)

@@ -1,43 +1,0 @@
-3794593 [1152, 896] {'scene': '', 'style': '', 'props': []} [('female', 'blonde', ['arms_up', 'v', 'double_v'])]
-7435756 [1152, 896] {'scene': '', 'style': '', 'props': []} [('female', 'pink', ['lying']), ('female', 'pink, blonde', ['lying', 'on_back', 'own_hands_together']), ('female', 'blonde, pink', ['lying', 'sleeping'])]
-7795464 [1152, 896] {'scene': 'simple background, white background', 'style': '', 'props': []} [('female', 'green', [])]
-7414129 [1152, 896] {'scene': 'couch, simple background, white background', 'style': '', 'props': []} [('female', 'blonde', ['sitting']), ('male', 'black', ['sitting'])]
-Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 2955.64it/s]
-Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]Loading weights:  36%|███▌      | 184/517 [00:00<00:00, 1734.64it/s]Loading weights:  70%|███████   | 362/517 [00:00<00:00, 1755.63it/s]Loading weights: 100%|██████████| 517/517 [00:00<00:00, 1787.06it/s]
-Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 3320.20it/s]
-[transformers] [1mCLIPTextModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
-Key                                                            | Status     |  | 
----------------------------------------------------------------+------------+--+-
-vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
-vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
-vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
-vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
-vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
-vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
-vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
-logit_scale                                                    | UNEXPECTED |  | 
-vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
-visual_projection.weight                                       | UNEXPECTED |  | 
-vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
-
-Notes:
-- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
-/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-  warnings.warn(
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-loaded /content/ckpt_overfit_fresh/latest.pt (step 300); token stats: {'global_token_norm': 34.259437561035156, 'char_token_norm_mean': 44.95461654663086, 'char_token_norm_max': 53.00421142578125, 'pooled_norm': 32.15655517578125}
-saved /content/diag_ckpt.jpg
