@@ -30,9 +30,3 @@ Kaggle for weights and data. Nothing is duplicated across them.
 | Pilot checkpoints from the swirl-fix and swap-loss experiments | Obsolete side experiments. Their results are in `reports/fix*` and `report/data/leakage_runs.json`. |
 | Kaggle `lam-server` notebook | Contains a server token |
 | The research paper PDF | Not ours to redistribute |
-
-## Training-time storage
-
-During training, stage outputs were saved to Google Drive (`MyDrive/lam_studio/`), so a lost cloud VM could resume
-in minutes (`lam/jobs/drive_data.sh`). All of it has been pulled, checksum-verified, deduplicated and published
-in the places above.
