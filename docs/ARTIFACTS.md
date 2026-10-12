@@ -1,0 +1,38 @@
+# Where everything lives
+
+Every artifact of the project exists in exactly one published place: GitHub for code, docs and small files,
+Kaggle for weights and data. Nothing is duplicated across them.
+
+## GitHub (this repo)
+
+| Path | Contents |
+|---|---|
+| `lam/`, `server/`, `web/`, `scripts/` | All code: model, training stages, dataset build, evaluation, app, cloud-GPU helpers |
+| `docs/` | Architecture, implementation, dataset, training, inference, results, this file |
+| `report/figs/`, `report/data/` | Report figures and the raw logged numbers behind them (stage results, leakage runs, colour factorial, dataset stats) |
+| `reports/` | Diagnosis sheets and sample grids from every milestone (overfit failure, v3 fix, pilots, full-U-Net gate, final model, Kaggle precision checks) |
+| `output/` | App demo video and sample generations |
+
+## Kaggle (all public)
+
+| Dataset / notebook | Contents |
+|---|---|
+| [`lam-diffusion-final`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-final) | **Trained model:** full U-Net (`unet.safetensors` + config), all other trained weights (`weights.pt`: LAM Encoder, text-encoder LoRA, dual-stream processors), pose library, code snapshot |
+| [`lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras) | Stage 1 anime VAE decoder (`vae_anime/`), stage 2a and stage 2 encoder checkpoints, Algorithm 1 head `G_θ` (`inverse.pt`), stage logs |
+| [`lam-diffusion-descriptors`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-descriptors) | Dataset annotations for 28,145 images, train/test split, selection, pose library, stats. **No images.** |
+| [`lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed) | Ready-to-train set: SDXL latents, CLIP embeddings, half-size ground truth, index |
+| [`lam-diffusion-inference`](https://www.kaggle.com/code/shibilahamed0095/lam-diffusion-inference) (notebook) | Clones this repo, loads the trained model on a free T4 in fp16, renders samples next to stock Animagine |
+
+## Not published (on purpose)
+
+| Item | Why |
+|---|---|
+| Pilot checkpoints from the swirl-fix and swap-loss experiments | Obsolete side experiments. Their results are in `reports/fix*` and `report/data/leakage_runs.json`. |
+| Kaggle `lam-server` notebook | Contains a server token |
+| The research paper PDF | Not ours to redistribute |
+
+## Training-time storage
+
+During training, stage outputs were saved to Google Drive (`MyDrive/lam_studio/`), so a lost cloud VM could resume
+in minutes (`lam/jobs/drive_data.sh`). All of it has been pulled, checksum-verified, deduplicated and published
+in the places above.

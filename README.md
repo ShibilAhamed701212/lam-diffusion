@@ -110,6 +110,7 @@ npm --prefix web install && npm --prefix web run dev
 | Algorithm 1 head `G_θ`, stage 1 anime VAE, stage 2a / 2 encoder checkpoints, stage logs | Kaggle: [`shibilahamed0095/lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras) |
 | Precomputed training set (latents, half-size ground truth, CLIP features, index) | Kaggle: [`shibilahamed0095/lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed) |
 | Dataset recipe and format | [docs/DATASET.md](docs/DATASET.md) |
+| Map of every artifact (GitHub vs Kaggle) | [docs/ARTIFACTS.md](docs/ARTIFACTS.md) |
 
 ## Repository layout
 
@@ -135,6 +136,7 @@ docs/         architecture · implementation · dataset · training · inference
 | [TRAINING.md](docs/TRAINING.md) | Every stage with commands, settings and results; orchestration on cloud GPUs |
 | [INFERENCE.md](docs/INFERENCE.md) | Python API, Algorithm 1, the app and server, Kaggle |
 | [RESULTS.md](docs/RESULTS.md) | All metrics, qualitative sheets, failures and limitations |
+| [ARTIFACTS.md](docs/ARTIFACTS.md) | Where every file lives: GitHub, Kaggle, and what was left out |
 
 ## Acknowledgements
 
