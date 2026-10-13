@@ -1,0 +1,91 @@
+6389441 {'scene': 'simple background, white background', 'style': '', 'props': []} [('red', 'red', ['hand_on_own_face', 'hand_on_own_cheek'])]
+6093848 {'scene': 'white background', 'style': '', 'props': []} [('black, grey', 'yellow', ['looking_back'])]
+7796037 {'scene': '', 'style': 'dark', 'props': []} [('blonde', 'yellow', [])]
+6662727 {'scene': 'white background', 'style': '', 'props': ['sword', 'weapon']} [('brown', 'brown', ['fighting_stance', 'holding'])]
+3365968 {'scene': 'simple background, black background', 'style': '', 'props': []} [('white', 'red', ['finger_to_mouth', 'looking_back'])]
+4508851 {'scene': 'pink background', 'style': '', 'props': []} [('white', '', ['standing', 'v', 'holding', 'holding_hands']), ('brown, white', 'brown', ['standing', 'walking', 'holding', 'holding_hands']), ('brown', 'brown', ['standing', 'v', 'holding', 'holding_hands'])]
+161147 {'scene': 'outdoors, day, road, park', 'style': 'sunlight', 'props': ['book', 'pen']} [('brown, purple', 'brown', ['sitting', 'holding']), ('brown, purple', 'brown', ['sitting', 'head_tilt', 'holding', 'sleeping']), ('brown', 'brown', ['sitting', 'head_tilt', 'holding', 'sleeping'])]
+7661205 {'scene': 'sky, cloud, cloudy sky, snow, building', 'style': 'depth of field, bokeh', 'props': ['bird', 'butterfly', 'cat']} [('blonde, black', 'blue', ['walking', 'holding', 'holding_hands']), ('black', 'blue', ['standing', 'holding', 'holding_hands']), ('black', 'blue', ['standing', 'walking', 'holding', 'holding_hands'])]
+4425651 {'scene': 'indoors, bed', 'style': '', 'props': ['bird', 'food']} [('blonde', 'blue', ['thumbs_up', 'holding']), ('blonde, red', 'red', ['sitting', 'thumbs_up', 'holding', 'eating']), ('blonde, red', 'red', ['sitting', 'thumbs_up', 'holding', 'eating'])]
+5931894 {'scene': 'indoors', 'style': '', 'props': ['phone', 'umbrella']} [('black, blonde', 'black', ['standing', 'hand_up', 'v', 'hand_in_pocket']), ('black', 'black', ['standing', 'v', 'holding']), ('black, blonde', 'black', ['standing', 'v', 'holding'])]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 4396.00it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]Loading weights:  56%|█████▌    | 288/517 [00:00<00:00, 2879.35it/s]Loading weights: 100%|██████████| 517/517 [00:00<00:00, 3063.76it/s]
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5363.32it/s]
+[transformers] [1mCLIPTextModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/teamspace/studios/this_studio/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+saved /teamspace/studios/this_studio/final_diag.jpg
+saved /teamspace/studios/this_studio/final_diag_multi.jpg
+40 usable test specs
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 43634.71it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 5555.26it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]Loading weights:  73%|███████▎  | 377/517 [00:00<00:00, 3764.29it/s]Loading weights: 100%|██████████| 517/517 [00:00<00:00, 3800.09it/s]
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5498.99it/s]
+[transformers] [1mCLIPTextModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/teamspace/studios/this_studio/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+final {'hair_orig': 0.625, 'hair_eyeswap': 0.575, 'eye_orig': 0.425, 'eye_hairswap': 0.325, 'hair_leak': 0.05, 'eye_leak': 0.1}
+saved /teamspace/studios/this_studio/final_leakage.json
+EVAL DONE

@@ -79,11 +79,13 @@ ax.axhline(0.10, c=C["warn"], ls="--", lw=1); ax.text(3.45, 0.105, "threshold 0.
 ax.set_xticks(x); ax.set_xticklabels(runs); ax.set_ylabel("accuracy drop"); ax.set_title("Attribute leakage across training stages (n=40 test specs)")
 ax.legend(fontsize=8, loc="upper right"); plt.savefig(f"{F}/f7_leakage_progress.png"); plt.close()
 
-# ---- F8 training throughput
-fig, ax = plt.subplots(figsize=(6.6, 3.4))
-cfgs = ["A100 40GB\nbatch 1 ×4 accum", "H200\nbatch 1 ×4 accum", "H200\nbatch 4 ×1"]; sec = [8.0, 5.0, 1.45]
-bars = ax.bar(cfgs, sec, color=[C["base"], C["amber"], C["ours"]])
-for r, v in zip(bars, sec): ax.text(r.get_x() + r.get_width()/2, v + .1, f"{v:.2f} s/step\n≈ {v*11000/3600:.1f} h / 11k steps", ha="center", fontsize=8)
-ax.set_ylim(0, 10); ax.set_ylabel("seconds per optimizer step"); ax.set_title("Full-U-Net training throughput (same effective batch = 4)")
+# ---- F8 training throughput (measured: A100 by lam/tests/smoke_full.py at batch 1; H200 from the full-run log)
+fig, ax = plt.subplots(figsize=(6.4, 3.8))
+cfgs = ["A100 40 GB\nmeasured 1.87 s per batch-1 step\n(× 4 for effective batch 4)", "H200, full run\nmeasured from the training log\nbatch 4 × accum 1"]
+sec = [4 * 1.87, 4.60 * 3600 / 11000]
+bars = ax.bar(cfgs, sec, color=[C["base"], C["ours"]])
+for r, v, h in zip(bars, sec, ["extrapolated", "measured"]):
+    ax.text(r.get_x() + r.get_width() / 2, v + .15, f"{v:.2f} s/step ({h})\n≈ {v*11000/3600:.1f} h / 11k steps", ha="center", fontsize=8)
+ax.set_ylim(0, 10); ax.set_ylabel("seconds per optimizer step (effective batch 4)"); ax.set_title("Full-U-Net training throughput")
 plt.savefig(f"{F}/f8_throughput.png"); plt.close()
 print("figures:", sorted(os.listdir(F)))

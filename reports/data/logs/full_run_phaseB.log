@@ -1,0 +1,313 @@
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 2138.43it/s]
+Loading weights:   0%|          | 0/517 [00:00<?, ?it/s]Loading weights:  30%|██▉       | 154/517 [00:00<00:00, 1504.91it/s]Loading weights:  67%|██████▋   | 344/517 [00:00<00:00, 1720.92it/s]Loading weights: 100%|██████████| 517/517 [00:00<00:00, 1909.11it/s]
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 2276.69it/s]
+[transformers] [1mCLIPTextModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/teamspace/studios/this_studio/venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:206: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+parameters: {'total': 3548122699, 'trainable': 2729812555}
+initialised LAM Encoder from /content/ckpt/stage2_from2a.pt
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights:  48%|████▊     | 187/392 [00:00<00:00, 1839.62it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 1954.52it/s]
+[transformers] [1mCLIPVisionModelWithProjection LOAD REPORT[0m from: openai/clip-vit-large-patch14
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...11}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+text_model.encoder.layers.{0...11}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+/teamspace/studios/this_studio/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/teamspace/studios/this_studio/venv/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+step 50/11000 pool=0.4 {'diff': 0.1059, 'action_img': 1.988, 'perc': 0.1251, 'style': 4.289e-05, 'clip_sim': 0.2589} gate mean -0.000 max 0.001 | 0.02h
+step 100/11000 pool=0.4 {'diff': 0.1036, 'action_img': 1.577, 'perc': 0.1072, 'style': 3.949e-05, 'clip_sim': 0.3164} gate mean -0.000 max 0.003 | 0.04h
+step 150/11000 pool=0.4 {'diff': 0.1104, 'action_img': 1.205, 'perc': 0.1221, 'style': 2.817e-05, 'clip_sim': 0.4318} gate mean -0.001 max 0.005 | 0.06h
+step 200/11000 pool=0.4 {'diff': 0.09551, 'action_img': 1.528, 'perc': 0.1095, 'style': 2.296e-05, 'clip_sim': 0.5369} gate mean -0.002 max 0.007 | 0.08h
+step 250/11000 pool=0.4 {'diff': 0.1145, 'action_img': 2.418, 'perc': 0.1063, 'style': 2.516e-05, 'clip_sim': 0.6307} gate mean -0.003 max 0.007 | 0.10h
+step 300/11000 pool=0.4 {'diff': 0.09439, 'action_img': 2.679, 'perc': 0.09574, 'style': 1.756e-05, 'clip_sim': 0.5963} gate mean -0.004 max 0.003 | 0.12h
+step 350/11000 pool=0.4 {'diff': 0.09572, 'action_img': 3.208, 'perc': 0.09386, 'style': 2.188e-05, 'clip_sim': 0.6175} gate mean -0.005 max 0.005 | 0.14h
+step 400/11000 pool=0.4 {'diff': 0.106, 'action_img': 3.417, 'perc': 0.1075, 'style': 2.24e-05, 'clip_sim': 0.613} gate mean -0.006 max 0.006 | 0.16h
+step 450/11000 pool=0.4 {'diff': 0.107, 'action_img': 3.836, 'perc': 0.1107, 'style': 2.123e-05, 'clip_sim': 0.6566} gate mean -0.006 max 0.010 | 0.18h
+step 500/11000 pool=0.4 {'diff': 0.1094, 'action_img': 4.037, 'perc': 0.1118, 'style': 1.564e-05, 'clip_sim': 0.6701} gate mean -0.007 max 0.012 | 0.20h
+step 550/11000 pool=0.4 {'diff': 0.09745, 'action_img': 3.9, 'perc': 0.1126, 'style': 1.935e-05, 'clip_sim': 0.5979} gate mean -0.009 max 0.014 | 0.22h
+step 600/11000 pool=0.4 {'diff': 0.09745, 'action_img': 3.543, 'perc': 0.09828, 'style': 1.646e-05, 'clip_sim': 0.5751} gate mean -0.009 max 0.012 | 0.24h
+step 650/11000 pool=0.4 {'diff': 0.1045, 'action_img': 3.706, 'perc': 0.1064, 'style': 2.208e-05, 'clip_sim': 0.5802} gate mean -0.010 max 0.008 | 0.26h
+step 700/11000 pool=0.4 {'diff': 0.1194, 'action_img': 4.228, 'perc': 0.1147, 'style': 1.567e-05, 'clip_sim': 0.6607} gate mean -0.011 max 0.009 | 0.28h
+step 750/11000 pool=0.4 {'diff': 0.1166, 'action_img': 4.346, 'perc': 0.1243, 'style': 2.455e-05, 'clip_sim': 0.6785} gate mean -0.012 max 0.009 | 0.30h
+step 800/11000 pool=0.4 {'diff': 0.1063, 'action_img': 4.016, 'perc': 0.1072, 'style': 1.711e-05, 'clip_sim': 0.6467} gate mean -0.014 max 0.011 | 0.33h
+step 850/11000 pool=0.4 {'diff': 0.1093, 'action_img': 4.515, 'perc': 0.1222, 'style': 2.11e-05, 'clip_sim': 0.6918} gate mean -0.016 max 0.019 | 0.35h
+step 900/11000 pool=0.4 {'diff': 0.112, 'action_img': 4.055, 'perc': 0.1199, 'style': 1.925e-05, 'clip_sim': 0.6572} gate mean -0.018 max 0.016 | 0.37h
+step 950/11000 pool=0.4 {'diff': 0.1191, 'action_img': 4.225, 'perc': 0.123, 'style': 2.146e-05, 'clip_sim': 0.6803} gate mean -0.019 max 0.017 | 0.39h
+step 1000/11000 pool=0.4 {'diff': 0.1174, 'action_img': 4.449, 'perc': 0.109, 'style': 1.927e-05, 'clip_sim': 0.6899} gate mean -0.021 max 0.015 | 0.41h
+step 1050/11000 pool=0.4 {'diff': 0.1003, 'action_img': 3.858, 'perc': 0.08569, 'style': 1.714e-05, 'clip_sim': 0.6075} gate mean -0.022 max 0.013 | 0.43h
+step 1100/11000 pool=0.4 {'diff': 0.1032, 'action_img': 4.205, 'perc': 0.1169, 'style': 1.762e-05, 'clip_sim': 0.6306} gate mean -0.023 max 0.007 | 0.45h
+step 1150/11000 pool=0.4 {'diff': 0.09924, 'action_img': 4.07, 'perc': 0.114, 'style': 1.767e-05, 'clip_sim': 0.6217} gate mean -0.023 max 0.007 | 0.47h
+step 1200/11000 pool=0.4 {'diff': 0.109, 'action_img': 3.859, 'perc': 0.1073, 'style': 1.869e-05, 'clip_sim': 0.5954} gate mean -0.024 max 0.007 | 0.49h
+checkpoint step001223 at step 1223
+step 1250/11000 pool=0.4 {'diff': 0.1198, 'action_img': 4.296, 'perc': 0.1222, 'style': 1.904e-05, 'clip_sim': 0.6843} gate mean -0.026 max 0.011 | 0.52h
+step 1300/11000 pool=0.4 {'diff': 0.09781, 'action_img': 3.75, 'perc': 0.09885, 'style': 1.561e-05, 'clip_sim': 0.5944} gate mean -0.027 max 0.006 | 0.54h
+step 1350/11000 pool=0.4 {'diff': 0.1035, 'action_img': 3.919, 'perc': 0.1077, 'style': 2.458e-05, 'clip_sim': 0.6276} gate mean -0.027 max 0.009 | 0.56h
+step 1400/11000 pool=0.4 {'diff': 0.1125, 'action_img': 3.851, 'perc': 0.1045, 'style': 1.714e-05, 'clip_sim': 0.6394} gate mean -0.030 max 0.010 | 0.58h
+step 1450/11000 pool=0.4 {'diff': 0.1074, 'action_img': 4.187, 'perc': 0.1181, 'style': 1.876e-05, 'clip_sim': 0.6723} gate mean -0.031 max 0.015 | 0.60h
+step 1500/11000 pool=0.4 {'diff': 0.09937, 'action_img': 3.307, 'perc': 0.08591, 'style': 1.315e-05, 'clip_sim': 0.5404} gate mean -0.033 max 0.017 | 0.62h
+step 1550/11000 pool=0.4 {'diff': 0.1079, 'action_img': 4.099, 'perc': 0.1198, 'style': 1.593e-05, 'clip_sim': 0.6453} gate mean -0.033 max 0.016 | 0.65h
+step 1600/11000 pool=0.4 {'diff': 0.1117, 'action_img': 4.178, 'perc': 0.1077, 'style': 1.807e-05, 'clip_sim': 0.6868} gate mean -0.033 max 0.021 | 0.67h
+step 1650/11000 pool=0.4 {'diff': 0.09842, 'action_img': 3.842, 'perc': 0.106, 'style': 1.448e-05, 'clip_sim': 0.6332} gate mean -0.035 max 0.022 | 0.69h
+step 1700/11000 pool=0.4 {'diff': 0.1083, 'action_img': 3.862, 'perc': 0.1132, 'style': 2.215e-05, 'clip_sim': 0.6292} gate mean -0.036 max 0.020 | 0.71h
+step 1750/11000 pool=0.4 {'diff': 0.1072, 'action_img': 4.361, 'perc': 0.1049, 'style': 2.714e-05, 'clip_sim': 0.6723} gate mean -0.038 max 0.024 | 0.73h
+step 1800/11000 pool=0.4 {'diff': 0.1135, 'action_img': 4.204, 'perc': 0.1234, 'style': 1.802e-05, 'clip_sim': 0.6745} gate mean -0.038 max 0.026 | 0.75h
+step 1850/11000 pool=0.4 {'diff': 0.09149, 'action_img': 3.343, 'perc': 0.09495, 'style': 1.605e-05, 'clip_sim': 0.549} gate mean -0.039 max 0.031 | 0.77h
+step 1900/11000 pool=0.4 {'diff': 0.1028, 'action_img': 4.071, 'perc': 0.1206, 'style': 1.522e-05, 'clip_sim': 0.6563} gate mean -0.041 max 0.028 | 0.79h
+step 1950/11000 pool=0.4 {'diff': 0.1204, 'action_img': 3.943, 'perc': 0.1188, 'style': 1.874e-05, 'clip_sim': 0.6497} gate mean -0.041 max 0.026 | 0.81h
+step 2000/11000 pool=0.4 {'diff': 0.09655, 'action_img': 3.986, 'perc': 0.09888, 'style': 1.678e-05, 'clip_sim': 0.6462} gate mean -0.042 max 0.025 | 0.83h
+step 2050/11000 pool=0.4 {'diff': 0.1131, 'action_img': 4.014, 'perc': 0.117, 'style': 2.059e-05, 'clip_sim': 0.6547} gate mean -0.044 max 0.029 | 0.85h
+step 2100/11000 pool=0.4 {'diff': 0.1055, 'action_img': 4.008, 'perc': 0.1086, 'style': 2.212e-05, 'clip_sim': 0.6306} gate mean -0.046 max 0.029 | 0.87h
+step 2150/11000 pool=0.4 {'diff': 0.1021, 'action_img': 3.59, 'perc': 0.1051, 'style': 3.399e-05, 'clip_sim': 0.5763} gate mean -0.048 max 0.023 | 0.89h
+step 2200/11000 pool=0.4 {'diff': 0.1114, 'action_img': 4.099, 'perc': 0.1005, 'style': 1.491e-05, 'clip_sim': 0.6507} gate mean -0.050 max 0.017 | 0.91h
+step 2250/11000 pool=0.4 {'diff': 0.1056, 'action_img': 3.99, 'perc': 0.1086, 'style': 2.172e-05, 'clip_sim': 0.6343} gate mean -0.051 max 0.015 | 0.93h
+step 2300/11000 pool=0.4 {'diff': 0.1068, 'action_img': 3.788, 'perc': 0.1056, 'style': 1.428e-05, 'clip_sim': 0.6053} gate mean -0.052 max 0.016 | 0.95h
+step 2350/11000 pool=0.4 {'diff': 0.1126, 'action_img': 4.205, 'perc': 0.117, 'style': 1.832e-05, 'clip_sim': 0.6618} gate mean -0.053 max 0.016 | 0.97h
+step 2400/11000 pool=0.4 {'diff': 0.09965, 'action_img': 3.363, 'perc': 0.1007, 'style': 1.488e-05, 'clip_sim': 0.5595} gate mean -0.052 max 0.019 | 0.99h
+[backup] weights_step001223.pt -> Drive
+checkpoint step002434 at step 2434
+step 2450/11000 pool=0.4 {'diff': 0.1208, 'action_img': 4.213, 'perc': 0.1117, 'style': 1.708e-05, 'clip_sim': 0.6635} gate mean -0.052 max 0.021 | 1.03h
+step 2500/11000 pool=0.4 {'diff': 0.1064, 'action_img': 4.113, 'perc': 0.1076, 'style': 2.111e-05, 'clip_sim': 0.6638} gate mean -0.053 max 0.020 | 1.05h
+step 2550/11000 pool=0.4 {'diff': 0.1068, 'action_img': 3.569, 'perc': 0.1078, 'style': 1.854e-05, 'clip_sim': 0.5776} gate mean -0.053 max 0.031 | 1.07h
+step 2600/11000 pool=0.4 {'diff': 0.106, 'action_img': 3.968, 'perc': 0.1138, 'style': 1.676e-05, 'clip_sim': 0.629} gate mean -0.054 max 0.028 | 1.09h
+step 2650/11000 pool=0.4 {'diff': 0.1103, 'action_img': 4.192, 'perc': 0.1165, 'style': 1.714e-05, 'clip_sim': 0.6928} gate mean -0.055 max 0.035 | 1.11h
+step 2700/11000 pool=0.4 {'diff': 0.101, 'action_img': 3.905, 'perc': 0.09434, 'style': 1.378e-05, 'clip_sim': 0.6345} gate mean -0.055 max 0.035 | 1.13h
+step 2750/11000 pool=0.4 {'diff': 0.1059, 'action_img': 3.483, 'perc': 0.08835, 'style': 1.305e-05, 'clip_sim': 0.5639} gate mean -0.057 max 0.035 | 1.15h
+step 2800/11000 pool=0.4 {'diff': 0.1068, 'action_img': 3.971, 'perc': 0.1065, 'style': 1.595e-05, 'clip_sim': 0.6755} gate mean -0.058 max 0.037 | 1.17h
+step 2850/11000 pool=0.4 {'diff': 0.1116, 'action_img': 3.899, 'perc': 0.1041, 'style': 1.407e-05, 'clip_sim': 0.6381} gate mean -0.059 max 0.041 | 1.19h
+step 2900/11000 pool=0.4 {'diff': 0.1138, 'action_img': 4.176, 'perc': 0.1135, 'style': 1.877e-05, 'clip_sim': 0.6932} gate mean -0.060 max 0.043 | 1.21h
+step 2950/11000 pool=0.4 {'diff': 0.1008, 'action_img': 3.874, 'perc': 0.117, 'style': 1.863e-05, 'clip_sim': 0.6457} gate mean -0.061 max 0.044 | 1.23h
+step 3000/11000 pool=0.4 {'diff': 0.1087, 'action_img': 4.048, 'perc': 0.1063, 'style': 1.927e-05, 'clip_sim': 0.6582} gate mean -0.063 max 0.050 | 1.25h
+step 3050/11000 pool=0.4 {'diff': 0.1004, 'action_img': 3.901, 'perc': 0.1172, 'style': 1.49e-05, 'clip_sim': 0.6393} gate mean -0.063 max 0.055 | 1.27h
+step 3100/11000 pool=0.4 {'diff': 0.1179, 'action_img': 3.932, 'perc': 0.1191, 'style': 1.932e-05, 'clip_sim': 0.6535} gate mean -0.065 max 0.059 | 1.29h
+step 3150/11000 pool=0.4 {'diff': 0.09737, 'action_img': 3.923, 'perc': 0.09974, 'style': 1.218e-05, 'clip_sim': 0.6195} gate mean -0.066 max 0.063 | 1.31h
+step 3200/11000 pool=0.4 {'diff': 0.1161, 'action_img': 3.824, 'perc': 0.1127, 'style': 1.654e-05, 'clip_sim': 0.6302} gate mean -0.067 max 0.058 | 1.33h
+step 3250/11000 pool=0.4 {'diff': 0.1066, 'action_img': 3.874, 'perc': 0.1049, 'style': 1.973e-05, 'clip_sim': 0.6316} gate mean -0.067 max 0.065 | 1.35h
+step 3300/11000 pool=0.8 {'diff': 0.09637, 'action_img': 3.614, 'perc': 0.09239, 'style': 1.462e-05, 'clip_sim': 0.6062} gate mean -0.068 max 0.057 | 1.37h
+step 3350/11000 pool=0.8 {'diff': 0.1079, 'action_img': 4.133, 'perc': 0.1266, 'style': 1.667e-05, 'clip_sim': 0.646} gate mean -0.071 max 0.052 | 1.39h
+step 3400/11000 pool=0.8 {'diff': 0.1082, 'action_img': 3.996, 'perc': 0.1232, 'style': 1.799e-05, 'clip_sim': 0.6337} gate mean -0.073 max 0.056 | 1.42h
+step 3450/11000 pool=0.8 {'diff': 0.09571, 'action_img': 3.698, 'perc': 0.08915, 'style': 1.6e-05, 'clip_sim': 0.6043} gate mean -0.076 max 0.055 | 1.43h
+step 3500/11000 pool=0.8 {'diff': 0.1247, 'action_img': 4.114, 'perc': 0.1097, 'style': 2.424e-05, 'clip_sim': 0.6632} gate mean -0.077 max 0.055 | 1.46h
+step 3550/11000 pool=0.8 {'diff': 0.1086, 'action_img': 3.431, 'perc': 0.1024, 'style': 1.571e-05, 'clip_sim': 0.5869} gate mean -0.078 max 0.055 | 1.48h
+step 3600/11000 pool=0.8 {'diff': 0.1065, 'action_img': 3.808, 'perc': 0.1147, 'style': 2.111e-05, 'clip_sim': 0.629} gate mean -0.078 max 0.061 | 1.50h
+[backup] weights_step002434.pt -> Drive
+step 3650/11000 pool=0.8 {'diff': 0.09965, 'action_img': 3.56, 'perc': 0.09733, 'style': 1.35e-05, 'clip_sim': 0.5974} gate mean -0.080 max 0.052 | 1.52h
+checkpoint step003660 at step 3660
+step 3700/11000 pool=0.8 {'diff': 0.1101, 'action_img': 3.939, 'perc': 0.1145, 'style': 1.7e-05, 'clip_sim': 0.6685} gate mean -0.080 max 0.063 | 1.55h
+step 3750/11000 pool=0.8 {'diff': 0.1112, 'action_img': 3.799, 'perc': 0.1143, 'style': 1.748e-05, 'clip_sim': 0.6622} gate mean -0.081 max 0.056 | 1.57h
+step 3800/11000 pool=0.8 {'diff': 0.1014, 'action_img': 3.844, 'perc': 0.1166, 'style': 1.665e-05, 'clip_sim': 0.6536} gate mean -0.081 max 0.057 | 1.59h
+step 3850/11000 pool=0.8 {'diff': 0.1091, 'action_img': 3.578, 'perc': 0.1083, 'style': 1.593e-05, 'clip_sim': 0.609} gate mean -0.082 max 0.054 | 1.61h
+step 3900/11000 pool=0.8 {'diff': 0.1152, 'action_img': 3.999, 'perc': 0.1208, 'style': 2.04e-05, 'clip_sim': 0.6842} gate mean -0.082 max 0.051 | 1.63h
+step 3950/11000 pool=0.8 {'diff': 0.1039, 'action_img': 3.514, 'perc': 0.1028, 'style': 1.751e-05, 'clip_sim': 0.6167} gate mean -0.082 max 0.052 | 1.65h
+step 4000/11000 pool=0.8 {'diff': 0.1102, 'action_img': 3.64, 'perc': 0.1216, 'style': 1.61e-05, 'clip_sim': 0.6361} gate mean -0.082 max 0.062 | 1.67h
+step 4050/11000 pool=0.8 {'diff': 0.09906, 'action_img': 3.722, 'perc': 0.105, 'style': 1.726e-05, 'clip_sim': 0.6421} gate mean -0.082 max 0.063 | 1.69h
+step 4100/11000 pool=0.8 {'diff': 0.1123, 'action_img': 3.666, 'perc': 0.1106, 'style': 1.567e-05, 'clip_sim': 0.6492} gate mean -0.082 max 0.064 | 1.71h
+step 4150/11000 pool=0.8 {'diff': 0.1019, 'action_img': 3.534, 'perc': 0.09114, 'style': 2.269e-05, 'clip_sim': 0.5779} gate mean -0.084 max 0.066 | 1.73h
+step 4200/11000 pool=0.8 {'diff': 0.1253, 'action_img': 3.934, 'perc': 0.1109, 'style': 1.825e-05, 'clip_sim': 0.6915} gate mean -0.084 max 0.065 | 1.75h
+step 4250/11000 pool=0.8 {'diff': 0.1099, 'action_img': 3.727, 'perc': 0.1154, 'style': 1.978e-05, 'clip_sim': 0.6138} gate mean -0.084 max 0.069 | 1.77h
+step 4300/11000 pool=0.8 {'diff': 0.1052, 'action_img': 3.55, 'perc': 0.09492, 'style': 1.444e-05, 'clip_sim': 0.607} gate mean -0.085 max 0.071 | 1.79h
+step 4350/11000 pool=0.8 {'diff': 0.1031, 'action_img': 3.579, 'perc': 0.1049, 'style': 2.131e-05, 'clip_sim': 0.6036} gate mean -0.086 max 0.071 | 1.81h
+step 4400/11000 pool=0.8 {'diff': 0.1099, 'action_img': 3.701, 'perc': 0.1036, 'style': 1.621e-05, 'clip_sim': 0.6225} gate mean -0.087 max 0.070 | 1.83h
+step 4450/11000 pool=0.8 {'diff': 0.1107, 'action_img': 3.547, 'perc': 0.1076, 'style': 1.552e-05, 'clip_sim': 0.6101} gate mean -0.088 max 0.074 | 1.85h
+step 4500/11000 pool=0.8 {'diff': 0.116, 'action_img': 3.705, 'perc': 0.1246, 'style': 1.874e-05, 'clip_sim': 0.6243} gate mean -0.088 max 0.074 | 1.87h
+step 4550/11000 pool=0.8 {'diff': 0.116, 'action_img': 3.565, 'perc': 0.1087, 'style': 1.393e-05, 'clip_sim': 0.6043} gate mean -0.089 max 0.070 | 1.90h
+step 4600/11000 pool=0.8 {'diff': 0.1026, 'action_img': 3.593, 'perc': 0.09792, 'style': 1.542e-05, 'clip_sim': 0.6255} gate mean -0.088 max 0.078 | 1.92h
+step 4650/11000 pool=0.8 {'diff': 0.1123, 'action_img': 3.783, 'perc': 0.1102, 'style': 1.638e-05, 'clip_sim': 0.6375} gate mean -0.089 max 0.076 | 1.94h
+step 4700/11000 pool=0.8 {'diff': 0.1159, 'action_img': 3.482, 'perc': 0.09238, 'style': 1.87e-05, 'clip_sim': 0.5883} gate mean -0.089 max 0.076 | 1.96h
+step 4750/11000 pool=0.8 {'diff': 0.1019, 'action_img': 3.585, 'perc': 0.1161, 'style': 1.214e-05, 'clip_sim': 0.615} gate mean -0.089 max 0.080 | 1.98h
+[backup] weights_step003660.pt -> Drive
+step 4800/11000 pool=0.8 {'diff': 0.1115, 'action_img': 3.546, 'perc': 0.1083, 'style': 1.898e-05, 'clip_sim': 0.6344} gate mean -0.091 max 0.082 | 2.00h
+step 4850/11000 pool=0.8 {'diff': 0.1051, 'action_img': 3.617, 'perc': 0.09654, 'style': 1.433e-05, 'clip_sim': 0.6451} gate mean -0.092 max 0.083 | 2.02h
+checkpoint step004873 at step 4873
+step 4900/11000 pool=0.8 {'diff': 0.1085, 'action_img': 3.642, 'perc': 0.1009, 'style': 1.767e-05, 'clip_sim': 0.6458} gate mean -0.092 max 0.092 | 2.05h
+step 4950/11000 pool=0.8 {'diff': 0.1048, 'action_img': 3.811, 'perc': 0.09909, 'style': 1.489e-05, 'clip_sim': 0.6423} gate mean -0.093 max 0.092 | 2.07h
+step 5000/11000 pool=0.8 {'diff': 0.1137, 'action_img': 3.598, 'perc': 0.1115, 'style': 1.777e-05, 'clip_sim': 0.6124} gate mean -0.095 max 0.085 | 2.09h
+step 5050/11000 pool=0.8 {'diff': 0.1081, 'action_img': 3.851, 'perc': 0.1044, 'style': 1.418e-05, 'clip_sim': 0.6983} gate mean -0.095 max 0.086 | 2.11h
+step 5100/11000 pool=0.8 {'diff': 0.1055, 'action_img': 3.774, 'perc': 0.1082, 'style': 1.526e-05, 'clip_sim': 0.6771} gate mean -0.095 max 0.092 | 2.13h
+step 5150/11000 pool=0.8 {'diff': 0.1158, 'action_img': 3.684, 'perc': 0.1183, 'style': 1.315e-05, 'clip_sim': 0.65} gate mean -0.096 max 0.089 | 2.15h
+step 5200/11000 pool=0.8 {'diff': 0.1122, 'action_img': 3.894, 'perc': 0.1244, 'style': 1.993e-05, 'clip_sim': 0.6875} gate mean -0.096 max 0.093 | 2.17h
+step 5250/11000 pool=0.8 {'diff': 0.1019, 'action_img': 3.299, 'perc': 0.1024, 'style': 1.42e-05, 'clip_sim': 0.604} gate mean -0.096 max 0.094 | 2.19h
+step 5300/11000 pool=0.8 {'diff': 0.1057, 'action_img': 3.587, 'perc': 0.09592, 'style': 3.898e-05, 'clip_sim': 0.6237} gate mean -0.097 max 0.098 | 2.22h
+step 5350/11000 pool=0.8 {'diff': 0.109, 'action_img': 3.786, 'perc': 0.1176, 'style': 1.444e-05, 'clip_sim': 0.6702} gate mean -0.098 max 0.099 | 2.24h
+step 5400/11000 pool=0.8 {'diff': 0.1053, 'action_img': 3.25, 'perc': 0.1005, 'style': 1.731e-05, 'clip_sim': 0.5613} gate mean -0.098 max 0.093 | 2.26h
+step 5450/11000 pool=0.8 {'diff': 0.09623, 'action_img': 3.712, 'perc': 0.1163, 'style': 1.7e-05, 'clip_sim': 0.6671} gate mean -0.098 max 0.097 | 2.28h
+step 5500/11000 pool=0.8 {'diff': 0.1056, 'action_img': 3.488, 'perc': 0.109, 'style': 1.533e-05, 'clip_sim': 0.6094} gate mean -0.098 max 0.097 | 2.30h
+step 5550/11000 pool=0.8 {'diff': 0.1172, 'action_img': 3.589, 'perc': 0.1294, 'style': 1.774e-05, 'clip_sim': 0.6424} gate mean -0.099 max 0.094 | 2.32h
+step 5600/11000 pool=0.8 {'diff': 0.1069, 'action_img': 3.603, 'perc': 0.09604, 'style': 1.507e-05, 'clip_sim': 0.6479} gate mean -0.099 max 0.098 | 2.34h
+step 5650/11000 pool=0.8 {'diff': 0.1024, 'action_img': 3.602, 'perc': 0.1001, 'style': 1.409e-05, 'clip_sim': 0.6489} gate mean -0.100 max 0.096 | 2.36h
+step 5700/11000 pool=0.8 {'diff': 0.1001, 'action_img': 3.513, 'perc': 0.09535, 'style': 1.23e-05, 'clip_sim': 0.6324} gate mean -0.100 max 0.095 | 2.38h
+step 5750/11000 pool=0.8 {'diff': 0.115, 'action_img': 3.944, 'perc': 0.1211, 'style': 1.732e-05, 'clip_sim': 0.7026} gate mean -0.099 max 0.102 | 2.40h
+step 5800/11000 pool=0.8 {'diff': 0.1185, 'action_img': 3.793, 'perc': 0.1085, 'style': 2.443e-05, 'clip_sim': 0.6708} gate mean -0.100 max 0.101 | 2.42h
+step 5850/11000 pool=0.8 {'diff': 0.1019, 'action_img': 3.842, 'perc': 0.1083, 'style': 1.606e-05, 'clip_sim': 0.6751} gate mean -0.100 max 0.098 | 2.44h
+step 5900/11000 pool=0.8 {'diff': 0.1118, 'action_img': 3.622, 'perc': 0.1152, 'style': 1.236e-05, 'clip_sim': 0.6438} gate mean -0.099 max 0.101 | 2.46h
+step 5950/11000 pool=0.8 {'diff': 0.1088, 'action_img': 3.691, 'perc': 0.1085, 'style': 2.185e-05, 'clip_sim': 0.6414} gate mean -0.100 max 0.097 | 2.48h
+[backup] weights_step004873.pt -> Drive
+step 6000/11000 pool=0.8 {'diff': 0.119, 'action_img': 3.755, 'perc': 0.1116, 'style': 1.685e-05, 'clip_sim': 0.6405} gate mean -0.101 max 0.097 | 2.50h
+step 6050/11000 pool=0.8 {'diff': 0.1044, 'action_img': 3.481, 'perc': 0.09669, 'style': 1.266e-05, 'clip_sim': 0.6126} gate mean -0.101 max 0.098 | 2.53h
+checkpoint step006085 at step 6085
+step 6100/11000 pool=0.8 {'diff': 0.1103, 'action_img': 3.763, 'perc': 0.1295, 'style': 1.822e-05, 'clip_sim': 0.6868} gate mean -0.101 max 0.099 | 2.56h
+step 6150/11000 pool=0.8 {'diff': 0.114, 'action_img': 3.352, 'perc': 0.1024, 'style': 1.186e-05, 'clip_sim': 0.5924} gate mean -0.102 max 0.100 | 2.58h
+step 6200/11000 pool=0.8 {'diff': 0.1101, 'action_img': 3.396, 'perc': 0.1024, 'style': 1.394e-05, 'clip_sim': 0.6133} gate mean -0.102 max 0.100 | 2.60h
+step 6250/11000 pool=0.8 {'diff': 0.1006, 'action_img': 3.481, 'perc': 0.11, 'style': 1.255e-05, 'clip_sim': 0.6258} gate mean -0.102 max 0.105 | 2.62h
+step 6300/11000 pool=0.8 {'diff': 0.1001, 'action_img': 3.581, 'perc': 0.1176, 'style': 1.466e-05, 'clip_sim': 0.6254} gate mean -0.103 max 0.103 | 2.64h
+step 6350/11000 pool=0.8 {'diff': 0.09775, 'action_img': 3.506, 'perc': 0.1024, 'style': 2.302e-05, 'clip_sim': 0.624} gate mean -0.104 max 0.099 | 2.66h
+step 6400/11000 pool=0.8 {'diff': 0.1042, 'action_img': 3.593, 'perc': 0.1019, 'style': 1.305e-05, 'clip_sim': 0.6346} gate mean -0.104 max 0.101 | 2.68h
+step 6450/11000 pool=0.8 {'diff': 0.1014, 'action_img': 3.126, 'perc': 0.08579, 'style': 1.37e-05, 'clip_sim': 0.5546} gate mean -0.105 max 0.102 | 2.70h
+step 6500/11000 pool=0.8 {'diff': 0.1074, 'action_img': 3.516, 'perc': 0.1031, 'style': 1.53e-05, 'clip_sim': 0.631} gate mean -0.105 max 0.104 | 2.72h
+step 6550/11000 pool=0.8 {'diff': 0.1181, 'action_img': 3.767, 'perc': 0.0999, 'style': 1.497e-05, 'clip_sim': 0.6718} gate mean -0.105 max 0.103 | 2.74h
+step 6600/11000 pool=0.8 {'diff': 0.1103, 'action_img': 3.536, 'perc': 0.08869, 'style': 1.69e-05, 'clip_sim': 0.6314} gate mean -0.106 max 0.104 | 2.76h
+step 6650/11000 pool=0.8 {'diff': 0.1097, 'action_img': 3.492, 'perc': 0.103, 'style': 2.276e-05, 'clip_sim': 0.6371} gate mean -0.106 max 0.102 | 2.78h
+step 6700/11000 pool=0.8 {'diff': 0.1069, 'action_img': 3.339, 'perc': 0.1155, 'style': 1.657e-05, 'clip_sim': 0.611} gate mean -0.107 max 0.105 | 2.80h
+step 6750/11000 pool=0.8 {'diff': 0.1103, 'action_img': 3.822, 'perc': 0.1004, 'style': 2.249e-05, 'clip_sim': 0.6639} gate mean -0.106 max 0.105 | 2.82h
+step 6800/11000 pool=0.8 {'diff': 0.09606, 'action_img': 3.39, 'perc': 0.0955, 'style': 1.505e-05, 'clip_sim': 0.6137} gate mean -0.106 max 0.105 | 2.84h
+step 6850/11000 pool=0.8 {'diff': 0.1099, 'action_img': 3.831, 'perc': 0.1235, 'style': 1.782e-05, 'clip_sim': 0.6861} gate mean -0.107 max 0.108 | 2.86h
+step 6900/11000 pool=0.8 {'diff': 0.09934, 'action_img': 3.575, 'perc': 0.09234, 'style': 1.661e-05, 'clip_sim': 0.6343} gate mean -0.107 max 0.110 | 2.88h
+step 6950/11000 pool=0.8 {'diff': 0.1068, 'action_img': 3.65, 'perc': 0.1175, 'style': 1.529e-05, 'clip_sim': 0.6645} gate mean -0.107 max 0.112 | 2.90h
+step 7000/11000 pool=0.8 {'diff': 0.102, 'action_img': 3.532, 'perc': 0.1141, 'style': 1.776e-05, 'clip_sim': 0.6329} gate mean -0.107 max 0.112 | 2.93h
+step 7050/11000 pool=0.8 {'diff': 0.1079, 'action_img': 3.811, 'perc': 0.1164, 'style': 1.769e-05, 'clip_sim': 0.706} gate mean -0.107 max 0.112 | 2.95h
+step 7100/11000 pool=0.8 {'diff': 0.1197, 'action_img': 3.789, 'perc': 0.1136, 'style': 1.61e-05, 'clip_sim': 0.6739} gate mean -0.108 max 0.111 | 2.97h
+step 7150/11000 pool=0.8 {'diff': 0.09604, 'action_img': 2.871, 'perc': 0.08287, 'style': 1.582e-05, 'clip_sim': 0.5237} gate mean -0.108 max 0.111 | 2.99h
+[backup] weights_step006085.pt -> Drive
+step 7200/11000 pool=0.8 {'diff': 0.1088, 'action_img': 3.608, 'perc': 0.1123, 'style': 2.309e-05, 'clip_sim': 0.6481} gate mean -0.108 max 0.112 | 3.01h
+step 7250/11000 pool=0.8 {'diff': 0.1103, 'action_img': 3.587, 'perc': 0.1191, 'style': 1.683e-05, 'clip_sim': 0.6678} gate mean -0.107 max 0.113 | 3.03h
+step 7300/11000 pool=0.8 {'diff': 0.1003, 'action_img': 3.679, 'perc': 0.1008, 'style': 1.439e-05, 'clip_sim': 0.6617} gate mean -0.108 max 0.113 | 3.05h
+checkpoint step007316 at step 7316
+step 7350/11000 pool=0.8 {'diff': 0.1121, 'action_img': 3.29, 'perc': 0.1078, 'style': 1.556e-05, 'clip_sim': 0.6004} gate mean -0.108 max 0.111 | 3.08h
+step 7400/11000 pool=0.8 {'diff': 0.09825, 'action_img': 3.775, 'perc': 0.1104, 'style': 1.482e-05, 'clip_sim': 0.7054} gate mean -0.108 max 0.113 | 3.10h
+step 7450/11000 pool=0.8 {'diff': 0.1113, 'action_img': 3.612, 'perc': 0.1001, 'style': 1.571e-05, 'clip_sim': 0.6347} gate mean -0.108 max 0.115 | 3.12h
+step 7500/11000 pool=0.8 {'diff': 0.09507, 'action_img': 3.072, 'perc': 0.08297, 'style': 1.466e-05, 'clip_sim': 0.5449} gate mean -0.108 max 0.113 | 3.14h
+step 7550/11000 pool=0.8 {'diff': 0.1134, 'action_img': 3.488, 'perc': 0.1051, 'style': 1.361e-05, 'clip_sim': 0.6235} gate mean -0.108 max 0.112 | 3.16h
+step 7600/11000 pool=0.8 {'diff': 0.1015, 'action_img': 3.648, 'perc': 0.1052, 'style': 1.935e-05, 'clip_sim': 0.6338} gate mean -0.108 max 0.113 | 3.18h
+step 7650/11000 pool=0.8 {'diff': 0.1173, 'action_img': 3.507, 'perc': 0.1011, 'style': 1.647e-05, 'clip_sim': 0.6267} gate mean -0.109 max 0.112 | 3.20h
+step 7700/11000 pool=1.0 {'diff': 0.1057, 'action_img': 3.621, 'perc': 0.1022, 'style': 1.76e-05, 'clip_sim': 0.6414} gate mean -0.108 max 0.113 | 3.22h
+step 7750/11000 pool=1.0 {'diff': 0.113, 'action_img': 3.571, 'perc': 0.1199, 'style': 1.445e-05, 'clip_sim': 0.6899} gate mean -0.108 max 0.113 | 3.24h
+step 7800/11000 pool=1.0 {'diff': 0.09556, 'action_img': 3.374, 'perc': 0.09614, 'style': 1.293e-05, 'clip_sim': 0.6302} gate mean -0.108 max 0.113 | 3.26h
+step 7850/11000 pool=1.0 {'diff': 0.1141, 'action_img': 3.557, 'perc': 0.1111, 'style': 1.55e-05, 'clip_sim': 0.6911} gate mean -0.108 max 0.113 | 3.28h
+step 7900/11000 pool=1.0 {'diff': 0.09763, 'action_img': 3.161, 'perc': 0.1071, 'style': 1.312e-05, 'clip_sim': 0.5857} gate mean -0.108 max 0.113 | 3.30h
+step 7950/11000 pool=1.0 {'diff': 0.1039, 'action_img': 3.394, 'perc': 0.1039, 'style': 1.802e-05, 'clip_sim': 0.6412} gate mean -0.108 max 0.113 | 3.32h
+step 8000/11000 pool=1.0 {'diff': 0.1047, 'action_img': 3.175, 'perc': 0.08775, 'style': 1.434e-05, 'clip_sim': 0.5798} gate mean -0.108 max 0.113 | 3.34h
+step 8050/11000 pool=1.0 {'diff': 0.1038, 'action_img': 3.62, 'perc': 0.09647, 'style': 1.857e-05, 'clip_sim': 0.6558} gate mean -0.108 max 0.116 | 3.36h
+step 8100/11000 pool=1.0 {'diff': 0.1158, 'action_img': 3.215, 'perc': 0.1078, 'style': 1.402e-05, 'clip_sim': 0.5936} gate mean -0.108 max 0.114 | 3.38h
+step 8150/11000 pool=1.0 {'diff': 0.1026, 'action_img': 3.351, 'perc': 0.1103, 'style': 1.699e-05, 'clip_sim': 0.6212} gate mean -0.108 max 0.114 | 3.40h
+step 8200/11000 pool=1.0 {'diff': 0.1091, 'action_img': 3.055, 'perc': 0.09938, 'style': 1.187e-05, 'clip_sim': 0.5748} gate mean -0.108 max 0.114 | 3.42h
+step 8250/11000 pool=1.0 {'diff': 0.1101, 'action_img': 3.335, 'perc': 0.1078, 'style': 1.382e-05, 'clip_sim': 0.6039} gate mean -0.108 max 0.114 | 3.44h
+step 8300/11000 pool=1.0 {'diff': 0.09856, 'action_img': 3.428, 'perc': 0.1092, 'style': 2.09e-05, 'clip_sim': 0.6363} gate mean -0.108 max 0.115 | 3.47h
+step 8350/11000 pool=1.0 {'diff': 0.1054, 'action_img': 3.141, 'perc': 0.08911, 'style': 1.443e-05, 'clip_sim': 0.5788} gate mean -0.108 max 0.114 | 3.49h
+[backup] weights_step007316.pt -> Drive
+step 8400/11000 pool=1.0 {'diff': 0.1075, 'action_img': 3.759, 'perc': 0.1127, 'style': 1.621e-05, 'clip_sim': 0.6664} gate mean -0.108 max 0.115 | 3.51h
+step 8450/11000 pool=1.0 {'diff': 0.1088, 'action_img': 3.793, 'perc': 0.1138, 'style': 1.845e-05, 'clip_sim': 0.7041} gate mean -0.108 max 0.114 | 3.53h
+step 8500/11000 pool=1.0 {'diff': 0.1207, 'action_img': 3.579, 'perc': 0.114, 'style': 1.714e-05, 'clip_sim': 0.6815} gate mean -0.108 max 0.113 | 3.55h
+checkpoint step008534 at step 8534
+step 8550/11000 pool=1.0 {'diff': 0.1087, 'action_img': 3.346, 'perc': 0.1012, 'style': 1.461e-05, 'clip_sim': 0.605} gate mean -0.109 max 0.113 | 3.58h
+step 8600/11000 pool=1.0 {'diff': 0.1182, 'action_img': 3.677, 'perc': 0.1192, 'style': 2.39e-05, 'clip_sim': 0.6703} gate mean -0.108 max 0.113 | 3.60h
+step 8650/11000 pool=1.0 {'diff': 0.1129, 'action_img': 3.415, 'perc': 0.1117, 'style': 1.498e-05, 'clip_sim': 0.6409} gate mean -0.109 max 0.114 | 3.62h
+step 8700/11000 pool=1.0 {'diff': 0.1263, 'action_img': 3.603, 'perc': 0.1154, 'style': 1.43e-05, 'clip_sim': 0.6853} gate mean -0.109 max 0.113 | 3.64h
+step 8750/11000 pool=1.0 {'diff': 0.09664, 'action_img': 3.04, 'perc': 0.08408, 'style': 1.376e-05, 'clip_sim': 0.5716} gate mean -0.109 max 0.113 | 3.66h
+step 8800/11000 pool=1.0 {'diff': 0.1153, 'action_img': 3.428, 'perc': 0.09179, 'style': 1.647e-05, 'clip_sim': 0.6304} gate mean -0.109 max 0.114 | 3.68h
+step 8850/11000 pool=1.0 {'diff': 0.1033, 'action_img': 3.489, 'perc': 0.08762, 'style': 1.647e-05, 'clip_sim': 0.6393} gate mean -0.109 max 0.115 | 3.70h
+step 8900/11000 pool=1.0 {'diff': 0.1092, 'action_img': 3.123, 'perc': 0.09824, 'style': 1.164e-05, 'clip_sim': 0.5888} gate mean -0.109 max 0.116 | 3.72h
+step 8950/11000 pool=1.0 {'diff': 0.1184, 'action_img': 3.704, 'perc': 0.11, 'style': 2.559e-05, 'clip_sim': 0.6988} gate mean -0.109 max 0.117 | 3.74h
+step 9000/11000 pool=1.0 {'diff': 0.103, 'action_img': 3.166, 'perc': 0.1072, 'style': 1.389e-05, 'clip_sim': 0.6041} gate mean -0.109 max 0.116 | 3.76h
+step 9050/11000 pool=1.0 {'diff': 0.108, 'action_img': 2.962, 'perc': 0.08863, 'style': 1.538e-05, 'clip_sim': 0.5597} gate mean -0.109 max 0.116 | 3.78h
+step 9100/11000 pool=1.0 {'diff': 0.1105, 'action_img': 3.578, 'perc': 0.1215, 'style': 1.746e-05, 'clip_sim': 0.6802} gate mean -0.109 max 0.117 | 3.80h
+step 9150/11000 pool=1.0 {'diff': 0.1118, 'action_img': 3.34, 'perc': 0.1048, 'style': 1.47e-05, 'clip_sim': 0.5839} gate mean -0.109 max 0.116 | 3.82h
+step 9200/11000 pool=1.0 {'diff': 0.1087, 'action_img': 3.648, 'perc': 0.1095, 'style': 1.608e-05, 'clip_sim': 0.6615} gate mean -0.109 max 0.116 | 3.84h
+step 9250/11000 pool=1.0 {'diff': 0.1069, 'action_img': 3.254, 'perc': 0.1154, 'style': 1.469e-05, 'clip_sim': 0.6201} gate mean -0.109 max 0.116 | 3.86h
+step 9300/11000 pool=1.0 {'diff': 0.1156, 'action_img': 3.138, 'perc': 0.1066, 'style': 2.506e-05, 'clip_sim': 0.5761} gate mean -0.109 max 0.116 | 3.88h
+step 9350/11000 pool=1.0 {'diff': 0.108, 'action_img': 3.454, 'perc': 0.1004, 'style': 1.535e-05, 'clip_sim': 0.6521} gate mean -0.109 max 0.116 | 3.90h
+step 9400/11000 pool=1.0 {'diff': 0.1229, 'action_img': 3.664, 'perc': 0.1155, 'style': 1.497e-05, 'clip_sim': 0.6836} gate mean -0.109 max 0.116 | 3.92h
+step 9450/11000 pool=1.0 {'diff': 0.09723, 'action_img': 3.397, 'perc': 0.1122, 'style': 1.284e-05, 'clip_sim': 0.6326} gate mean -0.109 max 0.116 | 3.94h
+step 9500/11000 pool=1.0 {'diff': 0.1203, 'action_img': 3.541, 'perc': 0.1079, 'style': 1.746e-05, 'clip_sim': 0.6343} gate mean -0.109 max 0.116 | 3.96h
+step 9550/11000 pool=1.0 {'diff': 0.116, 'action_img': 3.89, 'perc': 0.1144, 'style': 2.031e-05, 'clip_sim': 0.695} gate mean -0.109 max 0.116 | 3.98h
+[backup] weights_step008534.pt -> Drive
+step 9600/11000 pool=1.0 {'diff': 0.1064, 'action_img': 3.393, 'perc': 0.1096, 'style': 1.637e-05, 'clip_sim': 0.6399} gate mean -0.109 max 0.117 | 4.00h
+step 9650/11000 pool=1.0 {'diff': 0.1133, 'action_img': 3.341, 'perc': 0.09428, 'style': 1.777e-05, 'clip_sim': 0.6151} gate mean -0.109 max 0.116 | 4.02h
+step 9700/11000 pool=1.0 {'diff': 0.1098, 'action_img': 3.474, 'perc': 0.1247, 'style': 1.582e-05, 'clip_sim': 0.6716} gate mean -0.109 max 0.117 | 4.05h
+step 9750/11000 pool=1.0 {'diff': 0.1015, 'action_img': 3.229, 'perc': 0.1079, 'style': 1.129e-05, 'clip_sim': 0.605} gate mean -0.109 max 0.117 | 4.07h
+checkpoint step009750 at step 9750
+step 9800/11000 pool=1.0 {'diff': 0.1046, 'action_img': 3.342, 'perc': 0.09401, 'style': 1.438e-05, 'clip_sim': 0.6136} gate mean -0.109 max 0.117 | 4.10h
+step 9850/11000 pool=1.0 {'diff': 0.119, 'action_img': 3.522, 'perc': 0.1095, 'style': 1.849e-05, 'clip_sim': 0.6559} gate mean -0.109 max 0.117 | 4.12h
+step 9900/11000 pool=1.0 {'diff': 0.1121, 'action_img': 3.468, 'perc': 0.1195, 'style': 1.525e-05, 'clip_sim': 0.642} gate mean -0.109 max 0.117 | 4.14h
+step 9950/11000 pool=1.0 {'diff': 0.1015, 'action_img': 3.383, 'perc': 0.1085, 'style': 1.42e-05, 'clip_sim': 0.6394} gate mean -0.109 max 0.117 | 4.16h
+step 10000/11000 pool=1.0 {'diff': 0.1118, 'action_img': 3.402, 'perc': 0.1123, 'style': 1.368e-05, 'clip_sim': 0.6318} gate mean -0.109 max 0.116 | 4.18h
+step 10050/11000 pool=1.0 {'diff': 0.1088, 'action_img': 3.387, 'perc': 0.09694, 'style': 1.639e-05, 'clip_sim': 0.6483} gate mean -0.109 max 0.117 | 4.20h
+step 10100/11000 pool=1.0 {'diff': 0.1045, 'action_img': 3.816, 'perc': 0.09587, 'style': 2.212e-05, 'clip_sim': 0.6487} gate mean -0.109 max 0.117 | 4.22h
+step 10150/11000 pool=1.0 {'diff': 0.0982, 'action_img': 3.04, 'perc': 0.09451, 'style': 1.183e-05, 'clip_sim': 0.5767} gate mean -0.109 max 0.117 | 4.24h
+step 10200/11000 pool=1.0 {'diff': 0.1233, 'action_img': 3.598, 'perc': 0.1103, 'style': 1.989e-05, 'clip_sim': 0.66} gate mean -0.109 max 0.117 | 4.26h
+step 10250/11000 pool=1.0 {'diff': 0.1164, 'action_img': 3.174, 'perc': 0.0942, 'style': 1.432e-05, 'clip_sim': 0.5967} gate mean -0.109 max 0.117 | 4.28h
+step 10300/11000 pool=1.0 {'diff': 0.09453, 'action_img': 3.4, 'perc': 0.09667, 'style': 1.24e-05, 'clip_sim': 0.6285} gate mean -0.109 max 0.117 | 4.30h
+step 10350/11000 pool=1.0 {'diff': 0.1025, 'action_img': 3.573, 'perc': 0.1036, 'style': 1.579e-05, 'clip_sim': 0.6653} gate mean -0.109 max 0.117 | 4.32h
+step 10400/11000 pool=1.0 {'diff': 0.1075, 'action_img': 3.195, 'perc': 0.09812, 'style': 1.465e-05, 'clip_sim': 0.6016} gate mean -0.109 max 0.117 | 4.34h
+step 10450/11000 pool=1.0 {'diff': 0.09652, 'action_img': 3.224, 'perc': 0.0989, 'style': 1.622e-05, 'clip_sim': 0.5895} gate mean -0.109 max 0.117 | 4.36h
+step 10500/11000 pool=1.0 {'diff': 0.1076, 'action_img': 3.269, 'perc': 0.1042, 'style': 1.36e-05, 'clip_sim': 0.5963} gate mean -0.109 max 0.117 | 4.38h
+step 10550/11000 pool=1.0 {'diff': 0.1134, 'action_img': 3.338, 'perc': 0.1114, 'style': 1.863e-05, 'clip_sim': 0.6568} gate mean -0.109 max 0.117 | 4.41h
+step 10600/11000 pool=1.0 {'diff': 0.1128, 'action_img': 3.354, 'perc': 0.09932, 'style': 2.81e-05, 'clip_sim': 0.6384} gate mean -0.109 max 0.117 | 4.43h
+step 10650/11000 pool=1.0 {'diff': 0.1209, 'action_img': 3.573, 'perc': 0.1119, 'style': 2.014e-05, 'clip_sim': 0.6555} gate mean -0.109 max 0.117 | 4.45h
+step 10700/11000 pool=1.0 {'diff': 0.1182, 'action_img': 3.584, 'perc': 0.1104, 'style': 1.922e-05, 'clip_sim': 0.7034} gate mean -0.109 max 0.117 | 4.47h
+step 10750/11000 pool=1.0 {'diff': 0.1022, 'action_img': 2.96, 'perc': 0.08306, 'style': 1.726e-05, 'clip_sim': 0.5601} gate mean -0.109 max 0.117 | 4.49h
+[backup] weights_step009750.pt -> Drive
+step 10800/11000 pool=1.0 {'diff': 0.1046, 'action_img': 3.233, 'perc': 0.08696, 'style': 1.476e-05, 'clip_sim': 0.6051} gate mean -0.109 max 0.117 | 4.51h
+step 10850/11000 pool=1.0 {'diff': 0.1073, 'action_img': 3.58, 'perc': 0.1158, 'style': 1.776e-05, 'clip_sim': 0.6655} gate mean -0.109 max 0.117 | 4.53h
+step 10900/11000 pool=1.0 {'diff': 0.1071, 'action_img': 3.691, 'perc': 0.1153, 'style': 1.938e-05, 'clip_sim': 0.6862} gate mean -0.109 max 0.117 | 4.55h
+step 10950/11000 pool=1.0 {'diff': 0.1072, 'action_img': 3.263, 'perc': 0.1078, 'style': 1.557e-05, 'clip_sim': 0.5998} gate mean -0.109 max 0.117 | 4.57h
+checkpoint step010974 at step 10974
+step 11000/11000 pool=1.0 {'diff': 0.1116, 'action_img': 3.367, 'perc': 0.1119, 'style': 1.179e-05, 'clip_sim': 0.6267} gate mean -0.109 max 0.117 | 4.60h
+checkpoint step011000 at step 11000
+done at step 11000
+[backup] weights_step011000.pt -> Drive
+=== PHASE B DONE

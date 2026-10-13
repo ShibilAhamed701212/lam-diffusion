@@ -256,6 +256,32 @@ ax.set_xticks(x); ax.set_xticklabels(labels); ax.set_ylabel("mean L2 norm of a t
 ax.set_title("Token scale diagnosis: v3 matches the scale the U-Net expects"); ax.legend(fontsize=8)
 plt.savefig(os.path.join(FIG, "p3_token_norms.png")); plt.close()
 
+# ------------------------------------------------------------------ full 11,000-step run (from the training log)
+fr = list(csv.DictReader(open(os.path.join(D, "full_run_phaseB.csv"))))
+col = lambda k: np.array([float(r[k]) for r in fr])  # noqa: E731
+st_, win = col("step"), 9
+def smooth(y):
+    k = np.ones(win) / win
+    return np.convolve(np.pad(y, (win // 2, win // 2), mode="edge"), k, mode="valid")
+fig, ax = plt.subplots(2, 4, figsize=(17, 6.4))
+panels = [("diff", "L_diff  (ε-MSE)", False), ("action_img", "L_action-img  (InfoNCE)", False), ("perc", "L_perc  (LPIPS)", False),
+          ("style", "L_style  (Gram, log scale)", True), ("clip_sim", "CLIP similarity, image ↔ action embedding (↑)", False)]
+for a_, (key, title, logy) in zip(ax.flat, panels):
+    a_.plot(st_, col(key), color=C["base"], lw=.8, alpha=.8, label="logged (mean of 50 steps)")
+    a_.plot(st_, smooth(col(key)), color=C["ours"], lw=2, label=f"moving average ({win} records)")
+    a_.set_title(title); a_.set_xlabel("optimizer step")
+    if logy: a_.set_yscale("log")
+    for x in (3300, 7700): a_.axvline(x, ls=":", color="k", lw=.8)
+ax[0, 0].legend(fontsize=7)
+a_ = ax.flat[5]; a_.plot(st_, col("gate_mean"), color=C["ours"], label="mean over layers"); a_.plot(st_, col("gate_max"), color=C["amber"], label="max over layers")
+a_.set_title("Per-layer logit bias on action tokens"); a_.set_xlabel("optimizer step"); a_.legend(fontsize=7)
+xs = np.arange(0, 11001, 50); lr = np.minimum(1, (xs + 1) / 500) * 0.5 * (1 + np.cos(np.pi * xs / 11000))
+a_ = ax.flat[6]; a_.plot(xs, 1e-5 * lr, color=C["good"]); a_.set_title("U-Net learning rate (warm-up 500, cosine)"); a_.set_xlabel("optimizer step")
+a_ = ax.flat[7]; a_.step(st_, col("curriculum_pool"), where="post", color=C["amber"]); a_.set_ylim(0, 1.1)
+a_.set_title("Curriculum: share of the dataset eligible (easiest first)"); a_.set_xlabel("optimizer step")
+fig.suptitle("Full run: 11,000 steps, effective batch 4, one H200 (4.60 h). Dotted lines: curriculum stage changes (3,300 and 7,700).", y=1.0)
+plt.tight_layout(); plt.savefig(os.path.join(FIG, "p4_full_run_curves.png")); plt.close()
+
 # ------------------------------------------------------------------ scorecard
 s1 = load("stage1.json"); s2a = load("stage2a.json"); s2 = load("stage2_from2a.json"); inv = load("inverse.json")[-1]
 lr = load("leakage_runs.json")["results"]; lf = load("leakage_final.json")["results"]["final"]; st = load("dataset_stats.json")

@@ -84,8 +84,8 @@ Full detail: [TRAINING.md](TRAINING.md).
 **Hyperparameter selection:** the auxiliary loss weights were chosen from short pilots. The original weights
 produced swirly textures within 200 steps; 10× lower weights and diffusion-only both stayed clean.
 
-**Compute:** Colab L4 and A100 for the data and early stages, a single H200 for the full run (1.45 s/step,
-≈4.4 h), and Kaggle T4s for inference and evaluation. Every long job is resumable from checkpoints.
+**Compute:** Colab L4 and A100 for the data and early stages, a single H200 for the full run (1.51 s/step,
+4.60 h, measured from the training log), and Kaggle T4s for inference and evaluation. Every long job is resumable from checkpoints.
 
 ## 7. Validation and debugging methodology
 
