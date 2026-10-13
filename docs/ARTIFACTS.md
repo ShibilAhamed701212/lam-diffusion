@@ -23,6 +23,7 @@ Kaggle for weights and data. Nothing is duplicated across them.
 | [`lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras) | Stage 1 anime VAE decoder (`vae_anime/`), stage 2a and stage 2 encoder checkpoints, Algorithm 1 head `G_θ` (`inverse.pt`), stage logs |
 | [`lam-diffusion-descriptors`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-descriptors) | Dataset annotations for 28,145 images, train/test split, selection, pose library, stats. **No images.** |
 | [`lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed) | Ready-to-train set: SDXL latents, CLIP embeddings, half-size ground truth, index |
+| [`lam-diffusion-training-logs`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-training-logs) | **Full-run training record:** raw log and parsed per-50-step curves, 15 sample grids, evaluation log, launch scripts, trend statistics, NaN-diagnosis scripts |
 | [`lam-diffusion-inference`](https://www.kaggle.com/code/shibilahamed0095/lam-diffusion-inference) (notebook) | Clones this repo, loads the trained model on a free T4 in fp16, renders samples next to stock Animagine |
 
 ## Not published (on purpose)

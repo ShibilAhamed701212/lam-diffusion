@@ -103,7 +103,8 @@ LAM_GO=1 LAM_TOTAL_STEPS=11000 bash lam/jobs/phase_b.sh
 
 **Final run:** 11,000 optimizer steps, effective batch 4, on a single H200 (batch 4 × accumulation 1; 4.60 h wall-clock, 1.51 s/step, measured from
 the training log, [`reports/data/logs/full_run_phaseB.log`](../reports/data/logs/full_run_phaseB.log)).
-The full curves are in [`p4_full_run_curves.png`](../reports/figures/p4_full_run_curves.png).
+The full curves are in [`p4_full_run_curves.png`](../reports/figures/p4_full_run_curves.png), and their statistics
+(trend tests, per-stage means, timing, stability) in [TRAINING_ANALYSIS.md](TRAINING_ANALYSIS.md).
 
 ![Throughput](../reports/figures/f8_throughput.png)
 

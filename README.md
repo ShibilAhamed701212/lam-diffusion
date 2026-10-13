@@ -64,6 +64,7 @@ More: [Architecture](docs/ARCHITECTURE.md) · [Paper → code](docs/IMPLEMENTATI
 
 Full results, the diagnosis history (including what failed) and known limitations are in [docs/RESULTS.md](docs/RESULTS.md).
 Hypothesis tests, heat maps, threshold analysis and the improvement plan are in [docs/ANALYSIS.md](docs/ANALYSIS.md).
+The full-run training curves and their statistics are in [docs/TRAINING_ANALYSIS.md](docs/TRAINING_ANALYSIS.md): training was stable (4.60 h on one H200, no NaN), the auxiliary losses fell, and **`L_diff` stayed flat**.
 The paper's §V-C metric suite (CLIP Score, FID, LPIPS, SSIM, binding precision) is implemented in `lam/eval/`.
 
 ## The app
@@ -110,6 +111,7 @@ npm --prefix web install && npm --prefix web run dev
 | Anime descriptors (28,145 triplets, split, pose library, stats; **no images**) | Kaggle: [`shibilahamed0095/lam-diffusion-descriptors`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-descriptors) |
 | Algorithm 1 head `G_θ`, stage 1 anime VAE, stage 2a / 2 encoder checkpoints, stage logs | Kaggle: [`shibilahamed0095/lam-diffusion-extras`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-extras) |
 | Precomputed training set (latents, half-size ground truth, CLIP features, index) | Kaggle: [`shibilahamed0095/lam-diffusion-precomputed`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-precomputed) |
+| Full-run training log, parsed curves, sample grids, trend statistics, NaN-diagnosis scripts | Kaggle: [`shibilahamed0095/lam-diffusion-training-logs`](https://www.kaggle.com/datasets/shibilahamed0095/lam-diffusion-training-logs); also in `reports/data/` and `reports/milestones/full_run_samples/` |
 | Dataset recipe and format | [docs/DATASET.md](docs/DATASET.md) |
 | Map of every artifact (GitHub vs Kaggle) | [docs/ARTIFACTS.md](docs/ARTIFACTS.md) |
 
@@ -139,6 +141,7 @@ docs/         architecture · implementation · dataset · training · inference
 | [TRAINING.md](docs/TRAINING.md) | Every stage with commands, settings and results; orchestration on cloud GPUs |
 | [INFERENCE.md](docs/INFERENCE.md) | Python API, Algorithm 1, the app and server, Kaggle |
 | [RESULTS.md](docs/RESULTS.md) | All metrics, qualitative sheets, failures and limitations |
+| [TRAINING_ANALYSIS.md](docs/TRAINING_ANALYSIS.md) | Statistics of the full 11,000-step run: trend tests, per-curriculum-stage means, timing, sample progression, stability |
 | [PAPER_DATA.md](docs/PAPER_DATA.md) | Research-paper data pack: what data exists and what's missing, figure and table index, exact settings, loss functions, confidence intervals, claim–evidence matrix |
 | [ANALYSIS.md](docs/ANALYSIS.md) | Hypotheses and verdicts, heat maps, confusion matrices, confidence thresholds, comparison tables, where to improve |
 | [ARTIFACTS.md](docs/ARTIFACTS.md) | Where every file lives: GitHub, Kaggle, and what was left out |

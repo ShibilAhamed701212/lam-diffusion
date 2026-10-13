@@ -110,6 +110,7 @@ checkpoint, additive attention and a CFG-amplified pooled shift) before any larg
 | **Swap test (leakage)** | RQ2 | 40 single-character test specs; render as specified, eye-swapped and hair-swapped; a CLIP zero-shot colour reader on the character crop; leak = drop in the *other* attribute's accuracy |
 | **Colour factorial** | RQ3 | 8 hair × 8 eye colours × 2 seeds, trained model vs stock Animagine (prompt only, same seed); CLIP reads both colours; accuracy, confusion, confidence thresholds |
 | Qualitative sheets | All RQs | Fixed held-out specs: as specified / eye swapped / hair swapped / action off; side-by-side vs stock |
+| Training-dynamics statistics | Stability and convergence (RQ1) | Bootstrap-CI linear trends, Spearman tests, per-curriculum-stage means and timing on the 220 logged windows ([TRAINING_ANALYSIS.md](TRAINING_ANALYSIS.md)) |
 | §V-C suite (implemented) | Paper metrics | CLIP Score, FID/KID, LPIPS, SSIM, binding precision/recall, pose PCK, ablations (`lam/eval/`). Not yet run on the final weights. |
 
 **Controls:** identical seeds, sampler (Euler-ancestral), steps, CFG scale and negative prompt for every system

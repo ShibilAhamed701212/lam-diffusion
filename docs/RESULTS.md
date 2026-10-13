@@ -44,6 +44,15 @@ accuracy drops when one is swapped.
 
 At n = 40, a difference of 0.025 is one image, so read these as trends. Raw numbers: `reports/data/leakage_runs.json` (earlier runs) and `reports/data/leakage_final.json`.
 
+## The full run (11,000 steps, one H200, 4.60 h)
+
+Loss curves, trend tests and timing: [TRAINING_ANALYSIS.md](TRAINING_ANALYSIS.md). In short, the run was stable
+(no non-finite values), `L_action-img` (−19% after step 1,000) and `L_style` (−27%) decreased significantly,
+CLIP similarity rose from 0.26 to ≈ 0.63 in the first ~600 steps, and **`L_diff` stayed flat** (0.107 → 0.108,
+no significant trend).
+
+![Full run curves](../reports/figures/p4_full_run_curves.png)
+
 ## Training-stage curves
 
 | Stage 1 | Stage 2a | Stage 2 | `G_θ` |
