@@ -1,0 +1,57 @@
+run_id,label,step,total_steps,diff,action_img,perc,style,clip_sim,gate_mean,gate_max
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),50,300,0.09301,0.4238,0.05351,1.041e-05,0.1247,0.0,0.012
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),100,300,0.1083,0.2852,0.05593,1.003e-05,0.2563,-0.0,0.013
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),150,300,0.07912,0.1496,0.02813,6.104e-06,0.167,-0.002,0.019
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),200,300,0.09148,0.4819,0.05488,7.379e-06,0.3256,-0.001,0.021
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),250,300,0.1195,0.6893,0.06076,1.452e-05,0.3676,-0.002,0.021
+full_unet_gate,Full-U-Net overfit gate on A100 (16 samples),300,300,0.0987,0.5068,0.03829,5.357e-06,0.2298,-0.002,0.021
+pilot_chunk_full,Early chunk of a full-U-Net pilot run (11k-step schedule),50,11000,0.09993,0.8027,0.05119,2.23e-05,0.09271,-0.0,0.001
+pilot_chunk_full,Early chunk of a full-U-Net pilot run (11k-step schedule),100,11000,0.1013,0.6731,0.0473,1.904e-05,0.1243,-0.001,0.002
+pilot_chunk_full,Early chunk of a full-U-Net pilot run (11k-step schedule),150,11000,0.101,0.4943,0.04818,1.63e-05,0.1574,-0.001,0.006
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),50,11000,0.0837,0.7481,0.047,0.0,0.0924,-0.0,0.001
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),100,11000,0.0906,0.7276,0.0557,0.0,0.1429,-0.0,0.003
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),150,11000,0.0931,0.5745,0.0588,0.0,0.2099,-0.0,0.004
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),200,11000,0.079,0.6772,0.0513,0.0,0.2522,-0.0,0.004
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),250,11000,0.0738,0.7945,0.0343,0.0,0.2007,0.0,0.008
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),300,11000,0.0855,1.1299,0.0467,0.0,0.2631,0.0,0.016
+pilot_chunk_lora,Early chunk of a LoRA pilot run (11k-step schedule),350,11000,0.0782,1.2738,0.0462,0.0,0.2578,0.001,0.015
+pilot_lamphasea3,"Pilot, 500-step schedule (session lamphasea3; loss-weight variant not recorded in the log)",50,500,0.08834,,,,,-0.003,0.013
+pilot_lamphasea3,"Pilot, 500-step schedule (session lamphasea3; loss-weight variant not recorded in the log)",100,500,0.08921,,,,,-0.004,0.026
+pilot_lamphasea3,"Pilot, 500-step schedule (session lamphasea3; loss-weight variant not recorded in the log)",150,500,0.07459,,,,,-0.005,0.029
+pilot_lamphasea3,"Pilot, 500-step schedule (session lamphasea3; loss-weight variant not recorded in the log)",200,500,0.07869,,,,,-0.009,0.031
+pilot_lamphasea3,"Pilot, 500-step schedule (session lamphasea3; loss-weight variant not recorded in the log)",250,500,0.08261,,,,,-0.01,0.035
+pilot_lamphasea4,"Pilot, 500-step schedule (session lamphasea4; loss-weight variant not recorded in the log)",50,500,0.08561,0.418,0.04946,1.882e-05,0.1467,-0.003,0.01
+pilot_lamphasea4,"Pilot, 500-step schedule (session lamphasea4; loss-weight variant not recorded in the log)",100,500,0.09823,0.7185,0.05312,1.692e-05,0.2585,-0.005,0.026
+pilot_lamphasea4,"Pilot, 500-step schedule (session lamphasea4; loss-weight variant not recorded in the log)",150,500,0.08016,1.033,0.04829,1.553e-05,0.2546,-0.006,0.03
+pilot_lamphasea4,"Pilot, 500-step schedule (session lamphasea4; loss-weight variant not recorded in the log)",200,500,0.08726,1.243,0.04593,1.416e-05,0.258,-0.009,0.029
+pilot_lamphasea5,"Pilot, 500-step schedule (session lamphasea5; loss-weight variant not recorded in the log)",50,500,0.08738,0.4706,0.05288,1.821e-05,0.157,-0.002,0.01
+pilot_lamphasea5,"Pilot, 500-step schedule (session lamphasea5; loss-weight variant not recorded in the log)",100,500,0.08282,0.6777,0.0437,1.896e-05,0.2553,-0.004,0.017
+pilot_lamphasea5,"Pilot, 500-step schedule (session lamphasea5; loss-weight variant not recorded in the log)",150,500,0.08273,0.9613,0.0481,1.784e-05,0.2393,-0.005,0.025
+pilot_lamphasea5,"Pilot, 500-step schedule (session lamphasea5; loss-weight variant not recorded in the log)",200,500,0.09372,1.362,0.05773,1.922e-05,0.2922,-0.007,0.034
+pilot_lamphasea7,"Pilot, 500-step schedule (session lamphasea7; loss-weight variant not recorded in the log)",50,500,0.089,0.4517,0.04967,2.019e-05,0.151,-0.003,0.01
+pilot_lamphasea7,"Pilot, 500-step schedule (session lamphasea7; loss-weight variant not recorded in the log)",100,500,0.08232,0.5846,0.04093,1.316e-05,0.2167,-0.005,0.018
+pilot_lamphasea7,"Pilot, 500-step schedule (session lamphasea7; loss-weight variant not recorded in the log)",150,500,0.08314,0.9666,0.04782,1.481e-05,0.2594,-0.008,0.035
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",50,300,0.08828,1.492,0.05874,1.279e-05,0.0791,1.001,1.004
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",100,300,0.06461,0.5668,0.04301,7.1e-06,0.0943,1.001,1.008
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",150,300,0.08934,0.7441,0.04249,1.481e-05,0.152,1.001,1.012
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",200,300,0.07513,0.6683,0.03993,1.02e-05,0.149,1.0,1.012
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",250,300,0.07766,1.162,0.0538,1.357e-05,0.2135,1.0,1.013
+v2_fresh_additive,"Fresh encoder, additive attention (v2), lr 2e-5, 16-sample overfit",300,300,0.0797,1.354,0.05594,1.194e-05,0.2133,1.0,1.013
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",50,300,0.08778,0.4851,0.04885,1.507e-05,0.1561,0.998,1.015
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",100,300,0.09669,0.4187,0.05963,8.932e-06,0.3893,0.994,1.027
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",150,300,0.07973,0.3867,0.0434,7.723e-06,0.2473,0.993,1.034
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",200,300,0.07967,0.5087,0.04165,5.634e-06,0.3089,0.991,1.035
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",250,300,0.08472,0.5438,0.04963,7.21e-06,0.3032,0.99,1.035
+v2_old_checkpoint,"v2 init from the old-design stage2.pt, additive attention, lr 1e-4 (failed overfit)",300,300,0.08685,0.6565,0.04571,5.043e-06,0.2939,0.99,1.035
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",50,600,0.1071,1.383,0.08084,1.949e-05,0.1352,0.0,0.006
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",100,600,0.08735,0.5331,0.04612,1.901e-05,0.1878,0.0,0.011
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",150,600,0.0905,1.279,0.05897,1.492e-05,0.311,0.003,0.028
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",200,600,0.07978,1.444,0.04893,8.704e-06,0.3177,0.005,0.037
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",250,600,0.07094,1.429,0.04842,7.691e-06,0.2874,0.003,0.032
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",300,600,0.08206,1.437,0.04863,6.396e-06,0.2768,0.003,0.033
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",350,600,0.07991,1.213,0.04478,8.556e-06,0.2261,0.003,0.032
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",400,600,0.08958,1.559,0.04825,4.918e-06,0.3152,0.003,0.03
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",450,600,0.103,1.789,0.05722,5.585e-06,0.2977,0.003,0.03
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",500,600,0.07551,1.334,0.04301,4.903e-06,0.2309,0.003,0.03
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",550,600,0.08308,1.109,0.04168,4.892e-06,0.2168,0.003,0.03
+v3_shared_softmax,"v3 shared-softmax conditioning, lr 5e-5, 16-sample overfit",600,600,0.09555,1.631,0.05889,5.784e-06,0.2873,0.003,0.03

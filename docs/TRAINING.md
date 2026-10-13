@@ -105,6 +105,14 @@ LAM_GO=1 LAM_TOTAL_STEPS=11000 bash lam/jobs/phase_b.sh
 
 ![Throughput](../reports/figures/f8_throughput.png)
 
+**Known issue on newer PyTorch / H200.** With PyTorch 2.11 on an H200, the cuDNN fused-attention backward returned
+NaN gradients for noise levels t ≳ 500 (flash, memory-efficient and math attention were fine, and the same code was
+finite on an A100). `train_joint.py` therefore disables the cuDNN SDPA backend
+(`torch.backends.cuda.enable_cudnn_sdp(False)`).
+
+**Logging.** Each run writes `metrics.jsonl` (every 50 steps: loss terms, pre-clip gradient norm, gates, LR scale,
+curriculum pool). Runs made before this was added have only the printed log lines.
+
 ### Algorithm 1 head `G_θ` (`lam/train_inverse.py`)
 ConvNet + transformer on precomputed VAE latents → descriptor (presence, gender, age, framing, view, actions,
 box, keypoints, tag sets per field). 12 epochs, about 15 minutes on an L4.

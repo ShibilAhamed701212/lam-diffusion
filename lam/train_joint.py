@@ -181,7 +181,8 @@ def main() -> None:
         scale = min(1.0, (step + 1) / max(1, min(500, a.steps // 20))) * 0.5 * (1 + math.cos(math.pi * min(frac, 1.0)))
         for g, lr in zip(opt.param_groups, base_lrs):
             g["lr"] = lr * scale
-        torch.nn.utils.clip_grad_norm_(trainable, 1.0)
+        gnorm = torch.nn.utils.clip_grad_norm_(trainable, 1.0)  # returns the pre-clip global norm
+        hist["gnorm"] = hist.get("gnorm", 0.0) + float(gnorm) * a.accum  # per-micro-batch scale, averaged below
         opt.step()
         opt.zero_grad(set_to_none=True)
         step += 1
@@ -192,6 +193,11 @@ def main() -> None:
             el = time.time() - t_start
             print(f"step {step}/{a.steps} pool={sampler.pool_fraction(step * a.accum):.1f} {mean} "
                   f"gate mean {gates.mean():.3f} max {gates.max():.3f} | {el / 3600:.2f}h", flush=True)
+            # Machine-readable curve (loss terms, pre-clip gradient norm, gates, LR, curriculum pool) for papers/plots.
+            with open(ck / "metrics.jsonl", "a") as mf:
+                mf.write(json.dumps({"step": step, "lr_scale": round(scale, 5), "pool": sampler.pool_fraction(step * a.accum),
+                                     "gate_mean": float(gates.mean()), "gate_max": float(gates.max()),
+                                     "hours": round(el / 3600, 4), **mean}) + "\n")
             hist, n_hist = {}, 0
         if step % a.sample_every == 0:
             sample_grid(model, specs, ck / "samples", step)

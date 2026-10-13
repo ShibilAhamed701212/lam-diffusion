@@ -139,6 +139,7 @@ docs/         architecture · implementation · dataset · training · inference
 | [TRAINING.md](docs/TRAINING.md) | Every stage with commands, settings and results; orchestration on cloud GPUs |
 | [INFERENCE.md](docs/INFERENCE.md) | Python API, Algorithm 1, the app and server, Kaggle |
 | [RESULTS.md](docs/RESULTS.md) | All metrics, qualitative sheets, failures and limitations |
+| [PAPER_DATA.md](docs/PAPER_DATA.md) | Research-paper data pack: what data exists and what's missing, figure and table index, exact settings, loss functions, confidence intervals, claim–evidence matrix |
 | [ANALYSIS.md](docs/ANALYSIS.md) | Hypotheses and verdicts, heat maps, confusion matrices, confidence thresholds, comparison tables, where to improve |
 | [ARTIFACTS.md](docs/ARTIFACTS.md) | Where every file lives: GitHub, Kaggle, and what was left out |
 
