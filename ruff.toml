@@ -1,0 +1,16 @@
+# Bug-finding rules only; the code keeps its dense, long-line style.
+line-length = 120
+target-version = "py310"
+
+[lint]
+select = ["F", "E9", "B"]
+ignore = [
+    "B008",  # FastAPI Depends()/Header() defaults
+    "B905",  # zip() without strict=
+    "B007",  # unused loop variable
+    "B023",  # loop-variable closures, all consumed inside the loop
+]
+
+[lint.per-file-ignores]
+# `del pipe` at the end of each loop iteration; `render` is redefined with the new pipe next iteration.
+"lam/tests/eval_leakage.py" = ["F821"]

@@ -24,7 +24,6 @@ import math
 from dataclasses import dataclass
 
 import torch
-import torch.nn.functional as F
 from torch import nn
 
 from lam.descriptor import (ACTIONS, AGES, FRAMINGS, GENDERS, LABEL_NAMES, MAX_ACTIONS, MAX_CHARS,

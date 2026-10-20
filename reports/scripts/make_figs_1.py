@@ -2,7 +2,6 @@
 import json, os
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
 D = os.path.join(os.path.dirname(__file__), "..", "data"); F = os.path.join(os.path.dirname(__file__), "..", "figures")
 os.makedirs(F, exist_ok=True)

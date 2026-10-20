@@ -1,4 +1,4 @@
-import os, sys, glob
+import os, glob
 import numpy as np
 CH = 1 << 20
 def scan(p):
