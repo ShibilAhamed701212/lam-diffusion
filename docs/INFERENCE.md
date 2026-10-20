@@ -83,7 +83,7 @@ browser ── Next.js (web/) ── /api/lam/* proxy ──► FastAPI (server/
 
 | Step in the UI | Endpoint | What happens |
 |---|---|---|
-| 1. Describe | `POST /plan` | LLM or rule planner → spec. A safety filter rejects NSFW requests. |
+| 1. Describe | `POST /plan` | Planner → spec: the fine-tuned planner when `LAM_ENGINE=lam` and `LAM_PLANNER_LORA` exists, else the prompted base LLM, else keyword rules (also the fallback for unparseable output). A safety filter rejects NSFW requests. |
 | 2. Layout & pose | `POST /render` | Spec → normalized spec + pose skeleton image. Boxes are draggable and the spec is editable. |
 | 3. Generate | `POST /generate` | Spec → image, optionally with the prompt-only baseline on the same seed. |
 
