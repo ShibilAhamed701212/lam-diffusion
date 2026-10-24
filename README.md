@@ -129,6 +129,32 @@ output/       app demo video and sample generations
 docs/         architecture · implementation · dataset · training · inference · results
 ```
 
+## Testing
+
+CI (`.github/workflows/ci.yml`) runs on every pull request, on CPU and without model weights:
+
+```bash
+pip install --extra-index-url https://download.pytorch.org/whl/cpu \
+  torch diffusers transformers accelerate peft safetensors fastapi httpx pillow numpy pytest ruff
+ruff check .                                         # bug-finding rules, see ruff.toml
+python -m pytest -q server/tests lam/tests/test_swap.py
+npm --prefix web ci && npm --prefix web run lint && npm --prefix web run build
+```
+
+`server/tests/` covers the rule planner, spec normalization, prompt building, the fine-tuned planner's
+descriptor → spec mapping and the API's token check, safety gate and not-ready response. The GPU checks
+(`lam/tests/smoke.py`, `smoke_full.py`, `eval_leakage.py`) need a CUDA GPU and the weights; they are run by hand
+on the training VM and are not part of CI.
+
+### Fixed in the October 2026 audit
+
+- `POST /plan` never called the fine-tuned planner: `LAMEngine` loaded the planner LoRA, but the endpoint only
+  used the prompted base Qwen, which was loaded as a second 3B model beside it. With `LAM_ENGINE=lam` and a
+  planner LoRA, `/plan` now uses the fine-tuned planner and the base LLM is not loaded.
+- The rule planner matched substrings: "knight" added a `night` scene, "visiting" picked the sitting pose and
+  "catch" added a cat. It now matches whole words (plurals and verb forms still match).
+- Unused imports and an unused state setter flagged by the linters.
+
 ## Documentation
 
 | Doc | Contents |

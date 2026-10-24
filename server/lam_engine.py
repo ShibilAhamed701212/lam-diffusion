@@ -19,10 +19,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lam.model import LAMDiffusion  # noqa: E402
 from lam.pipeline import LAMDiffusionPipeline  # noqa: E402
 from lam.planner_ft import parse, plan as planner_generate  # noqa: E402
-from lam.spec_bridge import spec_to_descriptor  # noqa: E402
+from lam.spec_bridge import POSE_TO_ACTION, spec_to_descriptor  # noqa: E402
+from spec import normalize_spec  # noqa: E402
 
 WEIGHTS = os.environ.get("LAM_WEIGHTS", "/content/ckpt/weights.pt")
 PLANNER = os.environ.get("LAM_PLANNER_LORA", "/content/ckpt/planner_lora")
+ACTION_TO_POSE = {a: p for p, a in POSE_TO_ACTION.items()}
 POSES = os.environ.get("LAM_POSE_LIBRARY", "/content/data/pose_library.json")
 QUALITY = "safe, masterpiece, high score, great score, absurdres"  # "safe": Animagine rating tag
 NEGATIVE = ("nsfw, lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer digits, cropped, "
@@ -52,9 +54,10 @@ class LAMEngine:
             self.planner = PeftModel.from_pretrained(llm, PLANNER).eval()
 
     def plan(self, prompt: str) -> dict | None:
+        """Fine-tuned planner: request -> app spec, or None if it is not loaded or its output is unusable."""
         if self.planner is None:
             return None
-        return planner_generate(self.planner, self.tok, [prompt])[0]
+        return descriptor_to_spec(planner_generate(self.planner, self.tok, [prompt])[0])
 
     def generate(self, spec: dict, *, width: int, height: int, seed: int, steps: int, cfg: float,
                  attention: bool = False):
@@ -84,4 +87,19 @@ class LAMEngine:
                            num_inference_steps=steps, guidance_scale=cfg, generator=gen).images[0]
 
 
-__all__ = ["LAMEngine", "parse"]
+def descriptor_to_spec(desc: dict | None) -> dict | None:
+    """The planner's descriptor (ordered `actions`, no geometry) -> the app's spec (one `pose` + free-text `action`)."""
+    if not isinstance(desc, dict) or not isinstance(desc.get("characters"), list):
+        return None
+    chars = []
+    for c in desc["characters"]:
+        if not isinstance(c, dict):
+            continue
+        actions = [a for a in (c.get("actions") or []) if isinstance(a, str)]
+        pose = next((ACTION_TO_POSE[a] for a in actions if a in ACTION_TO_POSE), "standing")
+        rest = [a.replace("_", " ") for a in actions if ACTION_TO_POSE.get(a) != pose]
+        chars.append({**c, "pose": pose, "action": ", ".join(rest)})
+    return normalize_spec({**desc, "characters": chars}) if chars else None
+
+
+__all__ = ["LAMEngine", "descriptor_to_spec", "parse"]

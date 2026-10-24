@@ -14,7 +14,7 @@ import random
 
 import torch
 
-from lam.descriptor import ACTIONS, AGES, FRAMINGS, GENDERS
+from lam.descriptor import AGES, FRAMINGS, GENDERS
 
 SYSTEM = (
     "Convert the request into an anime illustration descriptor. Reply with JSON only: "

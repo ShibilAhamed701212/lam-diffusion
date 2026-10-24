@@ -180,8 +180,8 @@ def rule_plan(prompt: str) -> dict[str, Any]:
     if not genders:
         genders = [infer_identity(prompt)[0] or "other"]
 
-    pose = next((v for k, v in _POSE_WORDS.items() if k in p), "standing")
-    framing = "upper_body" if any(w in p for w in ("portrait", "close-up", "closeup", "upper body")) else "full_body"
+    pose = next((v for k, v in _POSE_WORDS.items() if _starts_word(k, p)), "standing")
+    framing = "upper_body" if any(_has_word(w, p) for w in ("portrait", "close-up", "closeup", "upper body")) else "full_body"
     hair_color = next((c for c in _COLORS if re.search(rf"\b{c}(-| )?hair", p) or re.search(rf"\b{c}-haired", p)), "")
     eye_color = next((c for c in _COLORS if re.search(rf"\b{c} eyes", p)), "")
     characters = []
@@ -189,24 +189,34 @@ def rule_plan(prompt: str) -> dict[str, Any]:
         characters.append({
             "gender": g,
             "hair_color": hair_color if i == 0 else "",
-            "hair_style": next((s for s in _HAIR_STYLES if s in p), "") if i == 0 else "",
+            "hair_style": next((s for s in _HAIR_STYLES if _has_word(s, p)), "") if i == 0 else "",
             "eye_color": eye_color if i == 0 else "",
-            "outfit": next((o for o in _OUTFITS if o in p), ""),
-            "expression": next((e for e in _EXPRESSIONS if e in p), ""),
+            "outfit": next((o for o in _OUTFITS if _has_word(o, p)), ""),
+            "expression": next((e for e in _EXPRESSIONS if _has_word(e, p)), ""),
             "action": "",
             "pose": pose,
             "framing": framing,
             "position": ["left", "right", "center"][i] if len(genders) > 1 else "center",
         })
-    props = [a for a in ("cat", "dog", "book", "umbrella", "sword", "guitar", "flower", "bookshelf") if a in p]
+    props = [a for a in ("cat", "dog", "book", "umbrella", "sword", "guitar", "flower", "bookshelf") if _has_word(a, p)]
     spec = normalize_spec({
-        "scene": ", ".join(s for s in _SCENES if s in p),
+        "scene": ", ".join(s for s in _SCENES if _has_word(s, p)),
         "style": "",
         "props": props,
         "characters": characters,
     })
     apply_identity_hints(spec, prompt)
     return spec
+
+
+def _has_word(term: str, p: str) -> bool:
+    """`term` as a whole word or phrase, optionally plural: "cat" matches "cats", not "catch"."""
+    return re.search(rf"\b{re.escape(term)}(s|es)?\b", p) is not None
+
+
+def _starts_word(stem: str, p: str) -> bool:
+    """A word starting with `stem`, so "sit" matches "sitting" but not "visiting"."""
+    return re.search(rf"\b{re.escape(stem)}", p) is not None
 
 
 def _count(p: str, words: tuple[str, ...]) -> int:

@@ -41,7 +41,8 @@ def _load_models() -> None:
             from generator import Generator
 
             _state["generator"] = Generator()
-        if USE_LLM:
+        # The trained engine brings its own fine-tuned planner; the prompted base LLM is only the fallback.
+        if USE_LLM and getattr(_state["generator"], "planner", None) is None:
             from planner import LLMPlanner
 
             _state["planner"] = LLMPlanner()
@@ -106,7 +107,7 @@ def health() -> dict[str, Any]:
     return {
         "status": _state["status"],
         "error": _state["error"],
-        "llm_planner": _state["planner"] is not None,
+        "llm_planner": _state["planner"] is not None or getattr(_state["generator"], "planner", None) is not None,
         "poses": POSE_NAMES,
         "framings": list(FRAMING_CROP),
         "aspects": list(ASPECTS),
@@ -118,11 +119,16 @@ def plan(req: PlanReq) -> dict[str, Any]:
     if reason := check_safe(req.prompt):
         raise HTTPException(status_code=400, detail=reason)
     t0 = time.time()
-    if req.planner == "llm" and _state["planner"] is not None:
+    spec, used = None, "rules"
+    if req.planner == "llm" and getattr(_state["generator"], "planner", None) is not None:
+        with _gpu:
+            spec = _state["generator"].plan(req.prompt)
+        used = "fine-tuned planner" if spec else "rules (planner output was not valid JSON)"
+    elif req.planner == "llm" and _state["planner"] is not None:
         with _gpu:
             spec, used = _state["planner"].plan(req.prompt)
-    else:
-        spec, used = rule_plan(req.prompt), "rules"
+    if spec is None:
+        spec = rule_plan(req.prompt)
     if reason := check_safe(*spec_texts(spec)):
         raise HTTPException(status_code=400, detail=reason)
     return {**_render(spec), "planner_used": used, "seconds": round(time.time() - t0, 2)}

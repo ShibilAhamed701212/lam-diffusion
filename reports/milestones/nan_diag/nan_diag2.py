@@ -1,4 +1,4 @@
-import random, sys, torch
+import sys, torch
 from diffusers import DDPMScheduler
 from torch.utils.data import DataLoader
 from lam.dataset import SampleDataset, collate_samples, load_index

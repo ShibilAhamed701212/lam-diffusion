@@ -3,7 +3,7 @@ from diffusers import DDPMScheduler
 from torch.utils.data import DataLoader
 from lam.dataset import SampleDataset, collate_samples, load_index
 from lam.descriptor import collate
-from lam.losses import AuxLosses, LossWeights, diffusion_loss, predict_x0
+from lam.losses import AuxLosses, diffusion_loss, predict_x0
 from lam.model import BASE_MODEL, LAMDiffusion
 
 def fin(name, x):

@@ -28,7 +28,7 @@ export function Studio() {
   const [seed, setSeed] = useState(-1);
   const [steps, setSteps] = useState(28);
   const [cfg, setCfg] = useState(5);
-  const [controlScale, setControlScale] = useState(0.8);
+  const controlScale = 0.8; // ControlNet engine only; no UI control for it
   const [withBaseline, setWithBaseline] = useState(false);
   const [history, setHistory] = useState<HistoryItem[]>([]);
   const [selected, setSelected] = useState(0);
